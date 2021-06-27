@@ -1,0 +1,459 @@
+# Graphical and Tabular Displays of Data
+
+
+**Learning Outcome:**
+
+---
+Calculate measures of central tendency, position, and spread, including standard deviation.
+---
+
+In this chapter, we will describe the data by displaying it in graphical and tabular forms. We will summarize it with proportions. We will explore the meaning of distribution and investigate its shape, center, and spread. We will also learn how to identify unusual observations and analyze their influence on the distribution. 
+
+
+## Descriptive Statistics
+
+Goal: to organize and summarize information contained in a variable or multiple variables
+
+<span style="color:#386cb0">
+  -- **Graphical Description**    
+  -- **Numerical Summaries**
+</span>
+
+
+* **Univariate Analysis:**  descriptions and summaries of a single variable, e.g., income
+
+* **Bivariate Analysis:** analysis of relation between two variables, e.g., income and level of education
+
+* **Multivariate Analysis:** analysis of relation among more than two variables, e.g., income, level of education, and gender 
+
+
+## Univariate Categorical Variable
+
+Survey of Zoo Animals
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+zoo <- c(rep("giraffe", 20), rep("orangutans", 15), rep("monkeys", 25))
+x <- list(zoo)
+mat <- x[[1]][sample(1:length(zoo))]
+mat <- matrix(unlist(mat), ncol = 6, byrow = TRUE)
+print.matrix <- function(m){
+  write.table(format(m, justify="right"),
+              row.names=F, col.names=F, quote=F)
+}
+print(mat)
+```
+
+A **frequency distribution (or frequency table)** shows how data are partitioned among several categories (or classes) by listing the categories along with the number (frequency) of data values in each of them.
+
+A **Relative Frequency Distribution** is a variation of the basic frequency distribution in which each class frequency is replaced by a relative frequency.
+
+$$
+\text{relative frequency of a class} = \frac{\text{frequency of a class}}{\text{sum of all frequencies}}
+$$
+
+
+
+$$ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{c|c|c}
+\text{Animal} & \text{Frequency} & \text{Relative Frequency} \\
+\hline
+\text{giraffes} & \text{20} & 33\% \\
+\text{orangutans} & \text{15} & 25\% \\
+\text{monkeys} & \text{25} & 42\%
+\end{array}
+}
+}
+$$
+
+
+**Displaying Frequency Distribution: Bar Chart**
+
+```{r echo=FALSE, message=F, warning=FALSE}
+library(plotly)
+p <- plot_ly(
+    x = c("giraffes", "orangutans", "monkeys"),
+    y = c(20, 15, 25),
+    name = "SF Zoo",
+    type = "bar"
+) %>% layout(yaxis = list(title = 'Count')) ; p
+```
+
+**Displaying Relative Frequency Distribution: Bar Chart**
+
+```{r echo=FALSE, message=F, warning=FALSE}
+p <- plot_ly(
+    x = c("giraffes", "orangutans", "monkeys"),
+    y = c(0.33, 0.25, 0.42),
+    name = "SF Zoo",
+    type = "bar"
+) %>% layout(yaxis = list(title = 'Relative Frequency')) ; p
+```
+
+**Pie Charts**
+
+The distribution of a categorical variable can be described by a **pie chart**, which is a disk where slices represent the categories. The proportion of the total area for one slice is equal to the relative frequency for the category represented by the slice. The relative frequencies are usually written as percentages.
+
+Example 1: Construct and Interpret a Pie Chart
+
+A total of 273 children were surveyed about what job they would want to do. The jobs and the percentages of the children who voted for them are shown in the table. 
+
+$$ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{r|c}
+\text{Job} & \text{Percent} \\
+\hline
+\text{Spy/Agent} & 16 \\
+\text{Veterinarian} & 13 \\
+\text{Professional Athlete} & 12  \\
+\text{Movie Star} & 10 \\
+\text{Video Game Designer} & 8 \\
+\text{Doctor} & 6 \\
+\text{Other} & 35 
+\end{array}
+}
+}
+$$
+
+
+
+```{r echo=FALSE, message=F, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+df <- data.frame(
+  group = c("Spy/Agent", "Veterinarian", "Prof. Athlete", "Movie Star", "Video Game Desiner", "Doctor", "Other"),
+  value = c(16, 13, 12, 10, 8, 6, 35)
+  )
+
+df <- df %>%
+  arrange(desc(group)) %>%
+  mutate(lab.ypos = cumsum(value) - 0.5*value)
+
+mycols <- c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF", "darkgreen", "darkorange", "#56B4E9")
+
+ggplot(df, aes(x = "", y = value, fill = group)) +
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  coord_polar("y", start = 0)+
+  geom_text(aes(y = lab.ypos, label = value), color = "white")+
+  scale_fill_manual(values = mycols) +
+  theme_void()
+```
+
+Questions:
+
+1. Find the proportion of the observations that fall in the spy category.
+
+2. Find the proportion of the observations that do NOT fall in the spy category.
+
+3. Find the proportion of the observations that fall in the athlete category OR fall in the movie-star category.
+
+
+## Interpreting a Multiple Bar Graph
+
+In a survey in 2012, 1960 adults were asked the following question: "Generally speaking, do you usually think of yourself as a Republican, Democrat, Independent, or other?" The results of the survey are described by the multiple bar graph. 
+
+
+```{r echo=FALSE, message=F, warning=FALSE}
+Party <- c("Democrats", "Independent", "Republican", "Other")
+Women <- c(.37, .38, .23, .02)
+Men <- c(.29, .43, .24, .03)
+
+data <- data.frame(Party, Women, Men)
+
+p <- data %>% 
+  plot_ly() %>%
+  add_trace(x = ~Party, y = ~Women, type = 'bar', 
+             text = Women, textposition = 'auto',
+             name = "Women",
+             marker = list(color = 'rgb(158,202,225)',
+                           line = list(color = 'rgb(8,48,107)', width = 1.5))) %>%
+  add_trace(x = ~Party, y = ~Men, type = 'bar', 
+            text = Men, textposition = 'auto',
+            name = "Men",
+            marker = list(color = 'rgb(58,200,225)',
+                          line = list(color = 'rgb(8,48,107)', width = 1.5))) %>%
+  layout(barmode = 'group',
+         xaxis = list(title = "Party"),
+         yaxis = list(title = "Relative Frequency")) 
+p
+```
+
+
+1. What proportion of women thought of themselves as Democrats?
+
+2. Which political party did the greatest proportion of men choose?
+
+3. Compare the proportion of women who thought of themselves as Independents to the proportion of men who thought of themselves as Independents.
+
+4. A total of 1081 women and 879 men responded to the survey. Were there more women or men who thought of themselves as Independents? How is this possible, given there was a smaller proportion of women who thought of themselves as Independents than men?
+
+
+**Example: Using a Two-Way (Contingency) Table to Find Proportions**
+
+The table summarizes the responses from all 42 students who participated in the survey about whether they had read a novel in the past year.
+
+$$ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{l|c|c|c}
+\text{Gender} & \text{Did Not Read Novel} & \text{Read Novel} & \text{Total}  \\
+\hline
+\text{Female} & 6 & 19 & 25 \\
+\text{Male} & 6 & 11 & 17 \\
+\hline 
+\text{Total} & 12 & 30 & 42 \\
+\hline 
+\end{array}
+}
+}
+$$
+
+1. How many of the students read a novel in the past year?
+2. What proportion of the students did not read a novel in the past year?
+3. What proportion of the women read a novel in the past year?
+4. What proportion of the students is men AND read a novel in the past year?
+
+
+## Univariate Continuous Variable
+
+**Email Data**
+
+Frequency distribution of number of characters in $50$ email messages.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+library(openintro)
+library(kableExtra)
+library(knitr)
+email <- sort(round(email50$num_char))
+mat <- matrix(unlist(email), ncol = 10, byrow = TRUE)
+print.matrix <- function(m){
+write.table(format(m, justify="right"),
+            row.names=F, col.names=F, quote=F)
+}
+print(mat)
+```
+
+A **cumulative frequency distribution** is a variation of basic frequency distribution in which each class is the sum of the frequencies for that class and all previous classes.
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+table <- cbind(table(round(email50$num_char)))
+table <- as.data.frame(table)
+library(dplyr)
+table <- add_rownames(table, "char_num")
+colnames(table) <- c("char_num", "freq")
+table <- transform(table, cumFreq = cumsum(freq), relative = prop.table(freq))
+
+library(formattable)
+table %>%
+  mutate(
+    # char_num = row.names(.),
+    char_num = char_num,
+    freq = color_tile("white", "orange")(freq),
+    cumFreq = color_tile("white", "white")(cumFreq),
+    relative = color_bar("lightblue")(relative)
+  ) %>%
+  select(char_num, everything()) %>%
+  kable(escape = F) %>%
+  kable_styling("hover", full_width = T) %>%
+  column_spec(1, width = "1cm") %>%
+  column_spec(2, width = "1cm") %>%
+  column_spec(3, width = "1cm") %>%
+  column_spec(4, width = "4cm") %>% 
+  kable_styling(bootstrap_options = c("striped","hover","responsive"),
+                position = "left")
+# http://haozhu233.github.io/kableExtra/awesome_table_in_html.html
+```
+
+
+## Dotplot
+
+A dot plot uses dots to show the frequency, or number of occurrences, of the values in a data set. The higher the stack of dots, the greater the number of occurrences there are of the corresponding value.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+stripchart(round(email50$num_char), method = "stack", offset = .5, at = .15, pch = 19, xaxt="n",
+            main = "Dot Plot of Email Characters", xlab = "Number of Characters")
+axis(1, at = seq(0, 65, by = 1), las=1)
+```
+
+**Interpreting Dotplot**
+
+1. What observation occurred the most?
+2. What observations occured the least?  
+3. How many emails have 25 or more characters?
+4. Do you see any outliers?
+
+**Definitions**
+
+The **frequency of an observation** of a numerical variable is the number of times the observation occurs in the group of data.
+
+The **frequency distribution** of a numerical variable is the observations together with their frequencies.
+
+An **outlier** is an observation that is quite a bit smaller or larger than the other observations.
+
+The **kth percentile** of some data is a value (not necessarily a data value) that is greater than or equal to approximately k% of the observations and is less than approximately (100 -  k)% of the observations.
+
+
+**Example: Percentiles**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+stripchart(round(email50$num_char), method = "stack", offset = .5, at = .15, pch = 19, xaxt="n",
+            main = "Dot Plot of Email Characters", xlab = "Number of Characters")
+axis(1, at = seq(0, 65, by = 1), las=1)
+```
+
+1. Find the percentile of 22.
+2. Find the 25th, 50th, and 75th percentile.
+
+
+## Stemplots
+
+A **stemplot (or stem-and-leaf plot)** breaks up each data value into two parts: **leaf**, which is the rightmost digit, and the **stem**, which is the other digits.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+print(mat)
+stem(round(email50$num_char))
+```
+
+## Histogram
+
+A histogram is a graph consisting of bars of equal width drawn adjacent to each other. The horizontal scale represents classes of quantitative data values; and the vertical scale represents frequencies.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA, fig.height = 5, fig.align = "center"}
+email50$num_char <- round(email50$num_char)
+hist(round(email50$num_char), 
+     xlab = "Number of Characters", 
+     main = "", col = 'orange', labels = TRUE)
+```
+
+**Histogram | Relative Frequency**
+
+The horizontal scale represents classes of quantitative data values; and the vertical scale represents relative frequencies.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+library(lattice)
+mybins2 <- seq(0,70,10)
+histogram(email50$num_char,  
+          type = "percent",
+          xlab = "Number of Characters", 
+          ylab = "Relative Frequency (%)", 
+          col = 'dodgerblue',
+          labels = TRUE,
+          breaks = mybins2)
+```
+
+
+
+**Histogram | $\textbf{Density} = \dfrac{\textbf{relative frequency}}{\textbf{bin width}}$**
+
+Area of each bar is the relative frequency of its class.
+
+$$
+\begin{align}
+\text {Density of class (10-20)} 
+&= \dfrac{\text{rel. freq of class (10-20)}}{\text{class width}} \\
+&= \dfrac{7/20}{10}   \\                         
+&= 0.014
+\end{align}
+$$
+
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+email50$num_char <- round(email50$num_char)
+hist(round(email50$num_char), freq = F, labels = TRUE,
+     xlab = "Number of Characters", main = "", col = 'orange')
+```
+
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, comment=NA, include=FALSE}
+library(dplyr)
+url <- "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv"
+f <- file.path(getwd(), "all_month.csv")
+download.file(url, f)
+eq <- read.csv("all_month.csv", 
+               header = TRUE, 
+               sep = ",",)
+eq <- subset(eq, eq$mag >= 0)
+hist(eq$mag, main = "Histogram of Earthquake Magnitude", labels = TRUE,
+     freq = F, xlab = "Magnitude", col = "skyblue")
+```
+
+
+
+**Histogram | Calculation of Percentiles**
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+ggplot(email50, aes(num_char, stat(density))) +
+  geom_histogram(breaks = mybins2) +
+  geom_text(
+    aes(label = round(stat(count) / sum(stat(count)), 2)), 
+    stat = 'bin', vjust = -1, breaks = mybins2 
+  ) + theme_minimal()
+```
+
+
+1. Estimate the percentile of the number of characters 20.
+
+
+
+
+2. Identify the class that contains the 75th percentile.
+
+
+
+**Cumulative Frequency Histogram**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+# Source: http://t-redactyl.io/blog/2016/02/creating-plots-in-r-using-ggplot2-part-7-histograms.html
+email50$num_char <- round(email50$num_char)
+library(ggplot2)
+ggplot(NULL,aes(email50$num_char)) + geom_histogram(aes(y=cumsum(..count..))) + stat_bin(aes(y=cumsum(..count..)), fill = 'orange', colour = 'black') + scale_y_continuous(name = "Cumulative Count") + scale_x_continuous(name = "Number of Characters", breaks = seq(0, 70, 10),
+                           limits=c(0, 70)) + theme_bw() +
+            theme(axis.line = element_line(size=1, colour = "black"),
+              panel.grid.major = element_line(colour = "#d3d3d3"),
+              panel.grid.minor = element_blank(),
+              panel.border = element_blank(), panel.background = element_blank(),
+              plot.title = element_text(size = 14, family = "Tahoma", face = "bold"),
+              text=element_text(family="Tahoma"),
+              axis.text.x=element_text(colour="black", size = 9),
+              axis.text.y=element_text(colour="black", size = 9))
+```
+
+For more examples, [click here](https://amlanbanerjee.shinyapps.io/bivariateregression/).
+
+
+**Exercise - Construct a Density Histogram**
+
+The accompanying frequency distribution summarizes data on the number of times smokers attempted to quit before their final successful attempts.
+
+$$ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{r|c}
+\text{Number of attempts} & \text{Frequency} \\
+\hline
+\textbf{0-10} & 778 \\
+\textbf{10-20} & 306 \\
+\textbf{20-30} & 274  \\
+\textbf{30-40} & 221 \\
+\textbf{40-50} & 238 
+\end{array}
+}
+}
+$$
+
+
+An **Outlier** is a data value that is far above or far below the rest of the data values.
+   
+```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+email50$num_char <- round(email50$num_char)
+hist(round(email50$num_char), xlab = "Number of Characters", main = "", col = 'orange', breaks = 20)
+```

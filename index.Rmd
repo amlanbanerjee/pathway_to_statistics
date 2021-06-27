@@ -1,0 +1,79 @@
+--- 
+title: "Pathway to Introductory Statistics"
+author: "Amlan Banerjee, Ph.D."
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+          config:
+            fontsettings: 
+              theme: 'white'
+              family: 'serif'
+              size: 3
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Performing Operations and Evaluating Expressions
+
+This chapter reviews some basic arithmetic operations that form the foundation of statistics.
+
+## Multiplication of Fractions
+
+If $b \ne 0, \ d \ne 0$, then
+
+$$\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{ac}{bd}$$
+
+
+## Division of Fractions
+
+If $b \ne 0, \ c \ne 0, \ d \ne 0$, then
+
+$$\dfrac{a}{b} \div \dfrac{c}{d} = \dfrac{ad}{bc}$$
+
+
+
+## Addition and Subtraction of Fractions
+
+If $b \ne 0, \ d \ne 0$, then
+
+$$\dfrac{a}{b} \pm \dfrac{c}{d} = \dfrac{ad \pm bc}{bd}$$
+
+## Cross Multiplication
+
+If $b \ne 0, \ d \ne 0, \text{ and }\dfrac{a}{b} = \dfrac{c}{d}$, then 
+
+$$ad = bc$$
+
+
+## Exponent
+
+$$x^{-n} = \dfrac{1}{x^n}$$
+
+
+## Order of Operations 
+
+We perform operations in  the following order:
+
+1. parentheses
+2. exponentiation
+3. multiplications and divisions from left to right
+4. additions and subtractions from left to right
+
+Example:
+
+
+
+$$
+\begin{align}
+&   8^2 + 2(4-8)^2 \div (-2)  \\
+& = 64 + 2(-4)^2 \div (-2)     \\
+& = 64 + 2 \cdot 16 \div (-2)   \\
+& = 64 - 16 \\
+& = 48
+\end{align}
+$$
