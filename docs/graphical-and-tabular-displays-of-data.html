@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Graphical and Tabular Displays of Data | Pathway to Introductory Statistics</title>
+  <meta name="description" content="Chapter 3 Graphical and Tabular Displays of Data | Pathway to Introductory Statistics" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Graphical and Tabular Displays of Data | Pathway to Introductory Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Graphical and Tabular Displays of Data | Pathway to Introductory Statistics" />
+  
+  
+  
+
+<meta name="author" content="Amlan Banerjee, Ph.D." />
+
+
+<meta name="date" content="2021-06-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="design-observational-studies-and-experiments.html"/>
+
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Performing Operations and Evaluating Expressions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#multiplication-of-fractions"><i class="fa fa-check"></i><b>1.1</b> Multiplication of Fractions</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#division-of-fractions"><i class="fa fa-check"></i><b>1.2</b> Division of Fractions</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#addition-and-subtraction-of-fractions"><i class="fa fa-check"></i><b>1.3</b> Addition and Subtraction of Fractions</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#cross-multiplication"><i class="fa fa-check"></i><b>1.4</b> Cross Multiplication</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#exponent"><i class="fa fa-check"></i><b>1.5</b> Exponent</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#order-of-operations"><i class="fa fa-check"></i><b>1.6</b> Order of Operations</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html"><i class="fa fa-check"></i><b>2</b> Design Observational Studies and Experiments</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#variable"><i class="fa fa-check"></i><b>2.1</b> Variable</a></li>
+<li class="chapter" data-level="2.2" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#statistics"><i class="fa fa-check"></i><b>2.2</b> Statistics</a></li>
+<li class="chapter" data-level="2.3" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#data-collection"><i class="fa fa-check"></i><b>2.3</b> Data Collection</a></li>
+<li class="chapter" data-level="2.4" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#sampling-from-a-population"><i class="fa fa-check"></i><b>2.4</b> Sampling from a Population</a></li>
+<li class="chapter" data-level="2.5" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#statistical-inference"><i class="fa fa-check"></i><b>2.5</b> Statistical Inference</a></li>
+<li class="chapter" data-level="2.6" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#sampling-errors"><i class="fa fa-check"></i><b>2.6</b> Sampling Errors</a></li>
+<li class="chapter" data-level="2.7" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#bias-and-precision"><i class="fa fa-check"></i><b>2.7</b> Bias and Precision</a></li>
+<li class="chapter" data-level="2.8" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#parameter-and-statistic"><i class="fa fa-check"></i><b>2.8</b> Parameter and Statistic</a></li>
+<li class="chapter" data-level="2.9" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#simple-random-sampling-srs"><i class="fa fa-check"></i><b>2.9</b> Simple Random Sampling (SRS)</a></li>
+<li class="chapter" data-level="2.10" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#stratified-sampling"><i class="fa fa-check"></i><b>2.10</b> Stratified Sampling</a></li>
+<li class="chapter" data-level="2.11" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#cluster-sampling"><i class="fa fa-check"></i><b>2.11</b> Cluster Sampling</a></li>
+<li class="chapter" data-level="2.12" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#nonrandom-sampling"><i class="fa fa-check"></i><b>2.12</b> Nonrandom Sampling</a></li>
+<li class="chapter" data-level="2.13" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#explanatory-and-response-variables"><i class="fa fa-check"></i><b>2.13</b> Explanatory and Response Variables</a></li>
+<li class="chapter" data-level="2.14" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#observational-studies"><i class="fa fa-check"></i><b>2.14</b> Observational Studies</a></li>
+<li class="chapter" data-level="2.15" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#confounding-variable"><i class="fa fa-check"></i><b>2.15</b> Confounding Variable</a></li>
+<li class="chapter" data-level="2.16" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#lurking-variable"><i class="fa fa-check"></i><b>2.16</b> Lurking Variable</a></li>
+<li class="chapter" data-level="2.17" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#experimental-design"><i class="fa fa-check"></i><b>2.17</b> Experimental Design</a></li>
+<li class="chapter" data-level="2.18" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#randomized-and-blocked-design"><i class="fa fa-check"></i><b>2.18</b> Randomized and Blocked Design</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html"><i class="fa fa-check"></i><b>3</b> Graphical and Tabular Displays of Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#descriptive-statistics"><i class="fa fa-check"></i><b>3.1</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="3.2" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#univariate-categorical-variable"><i class="fa fa-check"></i><b>3.2</b> Univariate Categorical Variable</a></li>
+<li class="chapter" data-level="3.3" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#interpreting-a-multiple-bar-graph"><i class="fa fa-check"></i><b>3.3</b> Interpreting a Multiple Bar Graph</a></li>
+<li class="chapter" data-level="3.4" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#univariate-continuous-variable"><i class="fa fa-check"></i><b>3.4</b> Univariate Continuous Variable</a></li>
+<li class="chapter" data-level="3.5" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#dotplot"><i class="fa fa-check"></i><b>3.5</b> Dotplot</a></li>
+<li class="chapter" data-level="3.6" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#stemplots"><i class="fa fa-check"></i><b>3.6</b> Stemplots</a></li>
+<li class="chapter" data-level="3.7" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#histogram"><i class="fa fa-check"></i><b>3.7</b> Histogram</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Pathway to Introductory Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="graphical-and-tabular-displays-of-data" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Graphical and Tabular Displays of Data</h1>
+<p><strong>Learning Outcome:</strong></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Calculate measures of central tendency, position, and spread, including standard deviation.</td>
+</tr>
+</tbody>
+</table>
+<p>In this chapter, we will describe the data by displaying it in graphical and tabular forms. We will summarize it with proportions. We will explore the meaning of distribution and investigate its shape, center, and spread. We will also learn how to identify unusual observations and analyze their influence on the distribution.</p>
+<div id="descriptive-statistics" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Descriptive Statistics</h2>
+<p>Goal: to organize and summarize information contained in a variable or multiple variables</p>
+<p><span style="color:#386cb0">
+– <strong>Graphical Description</strong><br />
+– <strong>Numerical Summaries</strong>
+</span></p>
+<ul>
+<li><p><strong>Univariate Analysis:</strong> descriptions and summaries of a single variable, e.g., income</p></li>
+<li><p><strong>Bivariate Analysis:</strong> analysis of relation between two variables, e.g., income and level of education</p></li>
+<li><p><strong>Multivariate Analysis:</strong> analysis of relation among more than two variables, e.g., income, level of education, and gender</p></li>
+</ul>
+</div>
+<div id="univariate-categorical-variable" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Univariate Categorical Variable</h2>
+<p>Survey of Zoo Animals</p>
+<pre><code>   giraffe orangutans    monkeys orangutans    monkeys    giraffe
+   monkeys    giraffe orangutans    giraffe    monkeys    monkeys
+   giraffe    giraffe orangutans orangutans    monkeys    monkeys
+   monkeys    monkeys    monkeys    giraffe    giraffe    monkeys
+   giraffe    monkeys    monkeys    giraffe orangutans    giraffe
+   monkeys    giraffe    monkeys    giraffe    giraffe    monkeys
+   monkeys orangutans    giraffe orangutans    monkeys    giraffe
+orangutans orangutans    giraffe    monkeys    giraffe    monkeys
+orangutans    monkeys    monkeys orangutans orangutans    giraffe
+   monkeys orangutans    giraffe orangutans    monkeys    monkeys</code></pre>
+<p>A <strong>frequency distribution (or frequency table)</strong> shows how data are partitioned among several categories (or classes) by listing the categories along with the number (frequency) of data values in each of them.</p>
+<p>A <strong>Relative Frequency Distribution</strong> is a variation of the basic frequency distribution in which each class frequency is replaced by a relative frequency.</p>
+<p><span class="math display">\[
+\text{relative frequency of a class} = \frac{\text{frequency of a class}}{\text{sum of all frequencies}}
+\]</span></p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{c|c|c}
+\text{Animal} &amp; \text{Frequency} &amp; \text{Relative Frequency} \\
+\hline
+\text{giraffes} &amp; \text{20} &amp; 33\% \\
+\text{orangutans} &amp; \text{15} &amp; 25\% \\
+\text{monkeys} &amp; \text{25} &amp; 42\%
+\end{array}
+}
+}
+\]</span></p>
+<p><strong>Displaying Frequency Distribution: Bar Chart</strong></p>
+<div id="htmlwidget-823f3b182fb57bb148e7" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-823f3b182fb57bb148e7">{"x":{"visdat":{"3074e6a77d7":["function () ","plotlyVisDat"]},"cur_data":"3074e6a77d7","attrs":{"3074e6a77d7":{"x":["giraffes","orangutans","monkeys"],"y":[20,15,25],"name":"SF Zoo","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"Count"},"xaxis":{"domain":[0,1],"automargin":true,"title":[],"type":"category","categoryorder":"array","categoryarray":["giraffes","monkeys","orangutans"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"x":["giraffes","orangutans","monkeys"],"y":[20,15,25],"name":"SF Zoo","type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p><strong>Displaying Relative Frequency Distribution: Bar Chart</strong></p>
+<div id="htmlwidget-5bd4ce3f24c377e56bd3" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5bd4ce3f24c377e56bd3">{"x":{"visdat":{"307442fb74c7":["function () ","plotlyVisDat"]},"cur_data":"307442fb74c7","attrs":{"307442fb74c7":{"x":["giraffes","orangutans","monkeys"],"y":[0.33,0.25,0.42],"name":"SF Zoo","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"Relative Frequency"},"xaxis":{"domain":[0,1],"automargin":true,"title":[],"type":"category","categoryorder":"array","categoryarray":["giraffes","monkeys","orangutans"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"x":["giraffes","orangutans","monkeys"],"y":[0.33,0.25,0.42],"name":"SF Zoo","type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p><strong>Pie Charts</strong></p>
+<p>The distribution of a categorical variable can be described by a <strong>pie chart</strong>, which is a disk where slices represent the categories. The proportion of the total area for one slice is equal to the relative frequency for the category represented by the slice. The relative frequencies are usually written as percentages.</p>
+<p>Example 1: Construct and Interpret a Pie Chart</p>
+<p>A total of 273 children were surveyed about what job they would want to do. The jobs and the percentages of the children who voted for them are shown in the table.</p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{r|c}
+\text{Job} &amp; \text{Percent} \\
+\hline
+\text{Spy/Agent} &amp; 16 \\
+\text{Veterinarian} &amp; 13 \\
+\text{Professional Athlete} &amp; 12  \\
+\text{Movie Star} &amp; 10 \\
+\text{Video Game Designer} &amp; 8 \\
+\text{Doctor} &amp; 6 \\
+\text{Other} &amp; 35 
+\end{array}
+}
+}
+\]</span></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>Questions:</p>
+<ol style="list-style-type: decimal">
+<li><p>Find the proportion of the observations that fall in the spy category.</p></li>
+<li><p>Find the proportion of the observations that do NOT fall in the spy category.</p></li>
+<li><p>Find the proportion of the observations that fall in the athlete category OR fall in the movie-star category.</p></li>
+</ol>
+</div>
+<div id="interpreting-a-multiple-bar-graph" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Interpreting a Multiple Bar Graph</h2>
+<p>In a survey in 2012, 1960 adults were asked the following question: “Generally speaking, do you usually think of yourself as a Republican, Democrat, Independent, or other?” The results of the survey are described by the multiple bar graph.</p>
+<div id="htmlwidget-1fabd3d6f4ba891805ba" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1fabd3d6f4ba891805ba">{"x":{"visdat":{"3074dfe4f3b":["function () ","plotlyVisDat"]},"cur_data":"3074dfe4f3b","attrs":{"3074dfe4f3b":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"bar","text":[0.37,0.38,0.23,0.02],"textposition":"auto","name":"Women","marker":{"color":"rgb(158,202,225)","line":{"color":"rgb(8,48,107)","width":1.5}},"inherit":true},"3074dfe4f3b.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"bar","text":[0.29,0.43,0.24,0.03],"textposition":"auto","name":"Men","marker":{"color":"rgb(58,200,225)","line":{"color":"rgb(8,48,107)","width":1.5}},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"barmode":"group","xaxis":{"domain":[0,1],"automargin":true,"title":"Party","type":"category","categoryorder":"array","categoryarray":["Democrats","Independent","Other","Republican"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Relative Frequency"},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"x":["Democrats","Independent","Republican","Other"],"y":[0.37,0.38,0.23,0.02],"type":"bar","text":[0.37,0.38,0.23,0.02],"textposition":["auto","auto","auto","auto"],"name":"Women","marker":{"color":"rgb(158,202,225)","line":{"color":"rgb(8,48,107)","width":1.5}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Democrats","Independent","Republican","Other"],"y":[0.29,0.43,0.24,0.03],"type":"bar","text":[0.29,0.43,0.24,0.03],"textposition":["auto","auto","auto","auto"],"name":"Men","marker":{"color":"rgb(58,200,225)","line":{"color":"rgb(8,48,107)","width":1.5}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<ol style="list-style-type: decimal">
+<li><p>What proportion of women thought of themselves as Democrats?</p></li>
+<li><p>Which political party did the greatest proportion of men choose?</p></li>
+<li><p>Compare the proportion of women who thought of themselves as Independents to the proportion of men who thought of themselves as Independents.</p></li>
+<li><p>A total of 1081 women and 879 men responded to the survey. Were there more women or men who thought of themselves as Independents? How is this possible, given there was a smaller proportion of women who thought of themselves as Independents than men?</p></li>
+</ol>
+<p><strong>Example: Using a Two-Way (Contingency) Table to Find Proportions</strong></p>
+<p>The table summarizes the responses from all 42 students who participated in the survey about whether they had read a novel in the past year.</p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{l|c|c|c}
+\text{Gender} &amp; \text{Did Not Read Novel} &amp; \text{Read Novel} &amp; \text{Total}  \\
+\hline
+\text{Female} &amp; 6 &amp; 19 &amp; 25 \\
+\text{Male} &amp; 6 &amp; 11 &amp; 17 \\
+\hline 
+\text{Total} &amp; 12 &amp; 30 &amp; 42 \\
+\hline 
+\end{array}
+}
+}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>How many of the students read a novel in the past year?</li>
+<li>What proportion of the students did not read a novel in the past year?</li>
+<li>What proportion of the women read a novel in the past year?</li>
+<li>What proportion of the students is men AND read a novel in the past year?</li>
+</ol>
+</div>
+<div id="univariate-continuous-variable" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Univariate Continuous Variable</h2>
+<p><strong>Email Data</strong></p>
+<p>Frequency distribution of number of characters in <span class="math inline">\(50\)</span> email messages.</p>
+<pre><code> 0  0  0  0  0  0  1  1  1  1
+ 1  2  2  3  3  3  4  4  5  5
+ 5  6  6  7  7  7  9  9  9 10
+10 10 11 11 12 14 14 16 17 22
+25 25 25 26 26 27 29 42 43 64</code></pre>
+<p>A <strong>cumulative frequency distribution</strong> is a variation of basic frequency distribution in which each class is the sum of the frequencies for that class and all previous classes.</p>
+<table class="table table-hover table table-striped table-hover table-responsive" style="margin-left: auto; margin-right: auto; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+char_num
+</th>
+<th style="text-align:left;">
+freq
+</th>
+<th style="text-align:left;">
+cumFreq
+</th>
+<th style="text-align:left;">
+relative
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+0
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">6</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">6</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 100.00%">0.12</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+1
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb733">5</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">11</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 83.33%">0.10</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+2
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcc">2</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">13</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 33.33%">0.04</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+3
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdb99">3</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">16</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 50.00%">0.06</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+4
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcc">2</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">18</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 33.33%">0.04</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+5
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdb99">3</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">21</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 50.00%">0.06</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+6
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcc">2</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">23</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 33.33%">0.04</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+7
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdb99">3</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">26</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 50.00%">0.06</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+9
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdb99">3</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">29</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 50.00%">0.06</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+10
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdb99">3</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">32</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 50.00%">0.06</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+11
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcc">2</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">34</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 33.33%">0.04</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+12
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">1</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">35</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 16.67%">0.02</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+14
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcc">2</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">37</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 33.33%">0.04</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+16
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">1</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">38</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 16.67%">0.02</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+17
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">1</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">39</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 16.67%">0.02</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+22
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">1</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">40</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 16.67%">0.02</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+25
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdb99">3</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">43</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 50.00%">0.06</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+26
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcc">2</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">45</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 33.33%">0.04</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+27
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">1</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">46</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 16.67%">0.02</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+29
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">1</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">47</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 16.67%">0.02</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+42
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">1</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">48</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 16.67%">0.02</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+43
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">1</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">49</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 16.67%">0.02</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1cm; ">
+64
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">1</span>
+</td>
+<td style="text-align:left;width: 1cm; ">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">50</span>
+</td>
+<td style="text-align:left;width: 4cm; ">
+<span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightblue; width: 16.67%">0.02</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dotplot" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Dotplot</h2>
+<p>A dot plot uses dots to show the frequency, or number of occurrences, of the values in a data set. The higher the stack of dots, the greater the number of occurrences there are of the corresponding value.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><strong>Interpreting Dotplot</strong></p>
+<ol style="list-style-type: decimal">
+<li>What observation occurred the most?</li>
+<li>What observations occured the least?<br />
+</li>
+<li>How many emails have 25 or more characters?</li>
+<li>Do you see any outliers?</li>
+</ol>
+<p><strong>Definitions</strong></p>
+<p>The <strong>frequency of an observation</strong> of a numerical variable is the number of times the observation occurs in the group of data.</p>
+<p>The <strong>frequency distribution</strong> of a numerical variable is the observations together with their frequencies.</p>
+<p>An <strong>outlier</strong> is an observation that is quite a bit smaller or larger than the other observations.</p>
+<p>The <strong>kth percentile</strong> of some data is a value (not necessarily a data value) that is greater than or equal to approximately k% of the observations and is less than approximately (100 - k)% of the observations.</p>
+<p><strong>Example: Percentiles</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li>Find the percentile of 22.</li>
+<li>Find the 25th, 50th, and 75th percentile.</li>
+</ol>
+</div>
+<div id="stemplots" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Stemplots</h2>
+<p>A <strong>stemplot (or stem-and-leaf plot)</strong> breaks up each data value into two parts: <strong>leaf</strong>, which is the rightmost digit, and the <strong>stem</strong>, which is the other digits.</p>
+<pre><code> 0  0  0  0  0  0  1  1  1  1
+ 1  2  2  3  3  3  4  4  5  5
+ 5  6  6  7  7  7  9  9  9 10
+10 10 11 11 12 14 14 16 17 22
+25 25 25 26 26 27 29 42 43 64</code></pre>
+<pre><code>
+  The decimal point is 1 digit(s) to the right of the |
+
+  0 | 00000011111223334455566777999
+  1 | 0001124467
+  2 | 25556679
+  3 | 
+  4 | 23
+  5 | 
+  6 | 4</code></pre>
+</div>
+<div id="histogram" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Histogram</h2>
+<p>A histogram is a graph consisting of bars of equal width drawn adjacent to each other. The horizontal scale represents classes of quantitative data values; and the vertical scale represents frequencies.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Histogram | Relative Frequency</strong></p>
+<p>The horizontal scale represents classes of quantitative data values; and the vertical scale represents relative frequencies.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><strong>Histogram | <span class="math inline">\(\textbf{Density} = \dfrac{\textbf{relative frequency}}{\textbf{bin width}}\)</span></strong></p>
+<p>Area of each bar is the relative frequency of its class.</p>
+<p><span class="math display">\[
+\begin{align}
+\text {Density of class (10-20)} 
+&amp;= \dfrac{\text{rel. freq of class (10-20)}}{\text{class width}} \\
+&amp;= \dfrac{7/20}{10}   \\                         
+&amp;= 0.014
+\end{align}
+\]</span></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><strong>Histogram | Calculation of Percentiles</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Estimate the percentile of the number of characters 20.</p></li>
+<li><p>Identify the class that contains the 75th percentile.</p></li>
+</ol>
+<p><strong>Cumulative Frequency Histogram</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>For more examples, <a href="https://amlanbanerjee.shinyapps.io/bivariateregression/">click here</a>.</p>
+<p><strong>Exercise - Construct a Density Histogram</strong></p>
+<p>The accompanying frequency distribution summarizes data on the number of times smokers attempted to quit before their final successful attempts.</p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{r|c}
+\text{Number of attempts} &amp; \text{Frequency} \\
+\hline
+\textbf{0-10} &amp; 778 \\
+\textbf{10-20} &amp; 306 \\
+\textbf{20-30} &amp; 274  \\
+\textbf{30-40} &amp; 221 \\
+\textbf{40-50} &amp; 238 
+\end{array}
+}
+}
+\]</span></p>
+<p>An <strong>Outlier</strong> is a data value that is far above or far below the rest of the data values.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="design-observational-studies-and-experiments.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 3
+},
+"edit": {
+"link": "https://github.com/amlanbanerjee/pathway_to_statistics/edit/master/03-display_data.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/amlanbanerjee/pathway_to_statistics/blob/master/03-display_data.Rmd",
+"text": null
+},
+"download": ["pathway_to_statistics.pdf", "pathway_to_statistics.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

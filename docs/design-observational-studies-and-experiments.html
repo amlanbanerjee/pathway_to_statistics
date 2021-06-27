@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Design Observational Studies and Experiments | Pathway to Introductory Statistics</title>
+  <meta name="description" content="Chapter 2 Design Observational Studies and Experiments | Pathway to Introductory Statistics" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Design Observational Studies and Experiments | Pathway to Introductory Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Design Observational Studies and Experiments | Pathway to Introductory Statistics" />
+  
+  
+  
+
+<meta name="author" content="Amlan Banerjee, Ph.D." />
+
+
+<meta name="date" content="2021-06-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="graphical-and-tabular-displays-of-data.html"/>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Performing Operations and Evaluating Expressions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#multiplication-of-fractions"><i class="fa fa-check"></i><b>1.1</b> Multiplication of Fractions</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#division-of-fractions"><i class="fa fa-check"></i><b>1.2</b> Division of Fractions</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#addition-and-subtraction-of-fractions"><i class="fa fa-check"></i><b>1.3</b> Addition and Subtraction of Fractions</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#cross-multiplication"><i class="fa fa-check"></i><b>1.4</b> Cross Multiplication</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#exponent"><i class="fa fa-check"></i><b>1.5</b> Exponent</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#order-of-operations"><i class="fa fa-check"></i><b>1.6</b> Order of Operations</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html"><i class="fa fa-check"></i><b>2</b> Design Observational Studies and Experiments</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#variable"><i class="fa fa-check"></i><b>2.1</b> Variable</a></li>
+<li class="chapter" data-level="2.2" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#statistics"><i class="fa fa-check"></i><b>2.2</b> Statistics</a></li>
+<li class="chapter" data-level="2.3" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#data-collection"><i class="fa fa-check"></i><b>2.3</b> Data Collection</a></li>
+<li class="chapter" data-level="2.4" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#sampling-from-a-population"><i class="fa fa-check"></i><b>2.4</b> Sampling from a Population</a></li>
+<li class="chapter" data-level="2.5" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#statistical-inference"><i class="fa fa-check"></i><b>2.5</b> Statistical Inference</a></li>
+<li class="chapter" data-level="2.6" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#sampling-errors"><i class="fa fa-check"></i><b>2.6</b> Sampling Errors</a></li>
+<li class="chapter" data-level="2.7" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#bias-and-precision"><i class="fa fa-check"></i><b>2.7</b> Bias and Precision</a></li>
+<li class="chapter" data-level="2.8" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#parameter-and-statistic"><i class="fa fa-check"></i><b>2.8</b> Parameter and Statistic</a></li>
+<li class="chapter" data-level="2.9" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#simple-random-sampling-srs"><i class="fa fa-check"></i><b>2.9</b> Simple Random Sampling (SRS)</a></li>
+<li class="chapter" data-level="2.10" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#stratified-sampling"><i class="fa fa-check"></i><b>2.10</b> Stratified Sampling</a></li>
+<li class="chapter" data-level="2.11" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#cluster-sampling"><i class="fa fa-check"></i><b>2.11</b> Cluster Sampling</a></li>
+<li class="chapter" data-level="2.12" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#nonrandom-sampling"><i class="fa fa-check"></i><b>2.12</b> Nonrandom Sampling</a></li>
+<li class="chapter" data-level="2.13" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#explanatory-and-response-variables"><i class="fa fa-check"></i><b>2.13</b> Explanatory and Response Variables</a></li>
+<li class="chapter" data-level="2.14" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#observational-studies"><i class="fa fa-check"></i><b>2.14</b> Observational Studies</a></li>
+<li class="chapter" data-level="2.15" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#confounding-variable"><i class="fa fa-check"></i><b>2.15</b> Confounding Variable</a></li>
+<li class="chapter" data-level="2.16" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#lurking-variable"><i class="fa fa-check"></i><b>2.16</b> Lurking Variable</a></li>
+<li class="chapter" data-level="2.17" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#experimental-design"><i class="fa fa-check"></i><b>2.17</b> Experimental Design</a></li>
+<li class="chapter" data-level="2.18" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#randomized-and-blocked-design"><i class="fa fa-check"></i><b>2.18</b> Randomized and Blocked Design</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html"><i class="fa fa-check"></i><b>3</b> Graphical and Tabular Displays of Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#descriptive-statistics"><i class="fa fa-check"></i><b>3.1</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="3.2" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#univariate-categorical-variable"><i class="fa fa-check"></i><b>3.2</b> Univariate Categorical Variable</a></li>
+<li class="chapter" data-level="3.3" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#interpreting-a-multiple-bar-graph"><i class="fa fa-check"></i><b>3.3</b> Interpreting a Multiple Bar Graph</a></li>
+<li class="chapter" data-level="3.4" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#univariate-continuous-variable"><i class="fa fa-check"></i><b>3.4</b> Univariate Continuous Variable</a></li>
+<li class="chapter" data-level="3.5" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#dotplot"><i class="fa fa-check"></i><b>3.5</b> Dotplot</a></li>
+<li class="chapter" data-level="3.6" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#stemplots"><i class="fa fa-check"></i><b>3.6</b> Stemplots</a></li>
+<li class="chapter" data-level="3.7" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#histogram"><i class="fa fa-check"></i><b>3.7</b> Histogram</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Pathway to Introductory Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="design-observational-studies-and-experiments" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Design Observational Studies and Experiments</h1>
+<p><strong>Learning Outcome:</strong></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><em>Select a suitable sampling design {simple random, systematic, stratified, cluster}, given information about the observational study or experiment.</em></td>
+</tr>
+</tbody>
+</table>
+<p>The chapter introduces two main types of statistical studies, namely observational studies and experiments. Also discussed here are their benefits and drawbacks and how to design them well.</p>
+<div id="variable" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Variable</h2>
+<p>In statistics, a variable is a characteristics of the individuals to be measured or observed.</p>
+<p><strong>Types of Variables</strong></p>
+<p><span style="color:#386cb0">
+<strong>1. CATEGORICAL (or QUALITATIVE)</strong> </span> - consist of names or labels (not numbers that represent counts or measurements)</p>
+<p><strong>- Nominal (unordered):</strong> the data fall into categories that have no particular order or ranking in relation to each other, e.g., <br>
+color (blue, green, red,…), <br>
+gender (male, female), <br>
+nationality (American, Canadian, Mexican,…)</p>
+<p><strong>- Ordinal (ordered):</strong> values have a natural order to ranking, e.g., <br>
+temperature (low, medium, high), <br>
+exam grade (A, B, C, D, F), <br>
+satisfaction (high, neutral, low)</p>
+<p><span style="color:#386cb0">
+<strong>2. NUMERICAL (or QUANTITATIVE)</strong> </span> - consist of numbers representing measurements or counts.</p>
+<p><strong>- Continuous:</strong> a subject or observation takes a value from an interval of real numbers, e.g., weight, height, age, etc.</p>
+<p><strong>- Discrete:</strong> a subject or observation takes certain values from a finite set, e.g. population, traffic volume, etc.</p>
+<p>Continuous and discrete variables can be further categorized as either <em>interval</em> or <em>ratio</em> variables.</p>
+<p><strong><em>Interval Variables:</em></strong> these variables are measured along a continuum, and they have the property that equal differences between measures represent equal differences in the values of the variable. For example, temperature measured in degrees Celsius or Fahrenheit. So the difference between <span class="math inline">\(20^\circ C\)</span> and <span class="math inline">\(30^\circ C\)</span> is the same as <span class="math inline">\(30^\circ C\)</span> to <span class="math inline">\(40^\circ C\)</span>. However, temperature measured in degrees Celsius or Fahrenheit is NOT a ratio variable.</p>
+<p><strong><em>Ratio Variables:</em></strong> these variables have all the properties of interval variables, but in addition have the property that the ratio variable has a meaningful absolute zero. For example, temperature measured in degrees Celsius or Fahrenheit is not a ratio variable because <span class="math inline">\(0^\circ C\)</span> does not mean there is no temperature. Other examples of ratio variables include height, mass, distance and many more. The name “ratio” reflects the fact that you can use the ratio of measurements. So, for example, a distance of ten meters is twice the distance of <span class="math inline">\(5\)</span> meters.</p>
+</div>
+<div id="statistics" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Statistics</h2>
+<p>Statistical studies are designed by the following five steps:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Raise a precise question about one or more variables.</strong></p></li>
+<li><p><strong>Design a plan to answer the question.</strong></p></li>
+<li><p><strong>Collect the data.</strong></p></li>
+<li><p><strong>Analyze the data.</strong></p></li>
+<li><p><strong>Draw a conclusion from the data about the question.</strong></p></li>
+</ol>
+</div>
+<div id="data-collection" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Data Collection</h2>
+<p>The first step in conducting research is to identify topics or questions that are to be investigated.
+A clearly laid out research question is helpful in identifying what subjects or cases
+should be studied and what variables are important. It is also important to consider how
+data are collected so that they are reliable and help achieve the research goals.</p>
+<p><strong>The Goal</strong>
+Learn about the entire group of individuals</p>
+<p><strong>The Problem</strong>
+It is usually impossible to collect data on the entire population</p>
+<ul>
+<li>expensive<br />
+</li>
+<li>time consuming<br />
+</li>
+<li>impossible to find everyone<br />
+</li>
+<li>not everyone willing to participate<br />
+</li>
+<li>population changing constantly - births and deaths</li>
+</ul>
+<p><strong>The Compromise</strong>
+Collect data on a smaller group of individuals selected from the population</p>
+<p><strong>The Challenge</strong>
+Bias (double-counting and under-counting)</p>
+</div>
+<div id="sampling-from-a-population" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Sampling from a Population</h2>
+<p><strong>Population</strong> is the complete collection of all measurements or data that are being considered. Typically, a population is the complete collection of data that we would like to make inference about.</p>
+<p><strong>Census</strong> is the collection of data from every member of the population.</p>
+<p><strong>Sampling Frame</strong> is a numbered list of all the individuals in the population from which a sample is drawn.</p>
+<p><strong>Sample</strong> is a subcollection of members selected from a population.</p>
+<p>Because populations are often very large, a common objective of the use of statistics is to obtain data from a sample and then use those data to form a conclusion about the population.</p>
+<p><img src="surveySample.png" width="900px" /></p>
+<p><strong>Example:</strong> Identify the Variable, Sample, and Population of a Study</p>
+<p>In a poll of <span class="math inline">\(1000\)</span> randomly selected American adults, <span class="math inline">\(48\%\)</span> of respondents said that they strongly disapprove of the way Congress is doing its job. The study then made an inference about all American adults.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Define the variable of the study.</li>
+<li>Identify the sample.</li>
+<li>Identify the population.</li>
+</ol>
+</div>
+<div id="statistical-inference" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Statistical Inference</h2>
+<p><strong>Inferential Statistics</strong> is the practice of using information from a sample to draw conclusions about the entire population.</p>
+<p>It is the process of making judgments about the parameters of a population and the reliability of statistical relationships, typically on the basis of random sampling.</p>
+<p><span class="math inline">\(\require{AMScd}\)</span>
+<span class="math display">\[
+        \begin{CD}
+        Sample @&gt; {\text {statistical inference}} &gt;&gt; Population
+        \end{CD}
+        \]</span></p>
+<p><span class="math display">\[\underbrace{\text {sample statistics}}_{\text{investigator knows}} = \underbrace{\text {population parameter}}_{\text{investigator wants to know}} + \underbrace{\text {bias}}_{\text{nonsampling error}} + \underbrace{\text {chance variation}}_{\text{random sampling error}}
+\]</span></p>
+</div>
+<div id="sampling-errors" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Sampling Errors</h2>
+<p><span style="color:#386cb0"> <strong>RANDOM SAMPLING ERROR</strong> </span> - occurs when the sample has been selected with a random method, but there is a discrepancy between a sample result and the true population result.</p>
+<p><span style="color:#386cb0"> <strong>NONSAMPLING ERROR</strong> </span> - is the results of human error, including such factors as wrong data entries, computing errors, questions with biased wording, false data provided by respondents, forming biased conclusions, or applying statistical methods that are not appropriate for the circumstances.</p>
+<p>A sampling method that consistently underestimates or overestimates some characteristics of the population is said to be <strong>biased</strong>.</p>
+<ul>
+<li><p><strong>Selection/Sampling bias</strong> - occurs when the sample is selected in such a way that it systematically excludes or underrepresented part of the population.</p>
+<ul>
+<li>An online survey conducted to estimate the percentage of Americans who have a Facebook account.</li>
+<li>The survey is biased because people who go online are favored.</li>
+<li>People who never go online cannot participate in the poll.</li>
+</ul></li>
+<li><p><strong>Nonresponse bias</strong> - occurs when responses are not obtained from all individuals selected for inclusion in a sample. It happens if individuals refuse to be part of the study or if the research cannot track down individuals identified to be in the sample.</p></li>
+<li><p><strong>Measurement or response bias</strong> - occurs when the data are collected in such a way that it tends to result in observed values that are different from the actual value in some systematic way. Contributing factors: question wording and order; mode of survey; influence of the interviewer; people might exaggerate how much money they earn; or a researcher might record the information incorrectly etc.</p></li>
+</ul>
+<p>Response bias can also result from the wording of questions. For example, compare the impact of the following two questions:</p>
+<ol style="list-style-type: decimal">
+<li>Do you brag about your past successes with others?</li>
+<li>Do you inspire others by sharing your past successes?</li>
+<li>Do you share your past successes with others?</li>
+</ol>
+<p><span style="color:#386cb0"> <strong>NONRANDOM SAMPLING ERROR</strong> </span> - is the results of using a sampling method that is not random, such as using a convenience sample or a voluntary response sample.</p>
+</div>
+<div id="bias-and-precision" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Bias and Precision</h2>
+<p><strong>Bias</strong><br />
+The average difference between the estimator and the true value.</p>
+<p><strong>Precision</strong><br />
+The standard deviation of the estimator.</p>
+<div class="centered">
+<p><img src="bias%20versus%20precision.png" width="400px" /></p>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+\text{Mean Squared Error, MSE} &amp;= precision^2 + bias^2 \\
+\text{Root Mean Squared Error, RMSE} &amp;= \sqrt{MSE}
+\end{aligned}
+\]</span></p>
+</div>
+<div id="parameter-and-statistic" class="section level2" number="2.8">
+<h2><span class="header-section-number">2.8</span> Parameter and Statistic</h2>
+<p>A <strong>parameter</strong> is a numerical measurement describing some characteristics of a population.</p>
+<p>A <strong>statistic</strong> is a numerical measurement describing some characteristics of a sample.</p>
+<p>Example:</p>
+<p>There are <span class="math inline">\(17,246,372\)</span> high school students in the U.S. In a study of <span class="math inline">\(8505\)</span> U.S. high school students <span class="math inline">\(16\)</span> years of age or older, <span class="math inline">\(44.5\%\)</span> of them said that they texted while driving at least once during the previous <span class="math inline">\(30\)</span> days.</p>
+<ol style="list-style-type: decimal">
+<li>Parameter: What percent of the population texted while driving? (unknown)</li>
+<li>Statistic: <span class="math inline">\(44.5\%\)</span></li>
+</ol>
+<p><strong>Exercise 2.1</strong> 10, 36, 38, 40, 42, 44, 46, 48</p>
+</div>
+<div id="simple-random-sampling-srs" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Simple Random Sampling (SRS)</h2>
+<p>A simple random sample of <em>n</em> subjects is selected in such a way that every possible sample of the sample size <em>n</em> has the same chance of being chosen.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>In statistics a sample of a population is said to be <strong>random</strong> if each member in the population has an equal chance of being chosen.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sampling with replacement</strong> - an individual is selected more than once.</p>
+<p><strong>Sampling without replacement</strong> - an individual is selected only once.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><sup><em>Source: OpenIntro.Org</em></sup></p>
+</div>
+<div id="stratified-sampling" class="section level2" number="2.10">
+<h2><span class="header-section-number">2.10</span> Stratified Sampling</h2>
+<ol style="list-style-type: decimal">
+<li>The population is divided into <span style="color:#b2182b"> <strong>non-overlapping, homogeneous</strong> </span> subgroups called <span style="color:#b2182b"> <strong>strata</strong> </span>.</li>
+<li>Then, SRS is employed to select a certain number or a certain proportion of the whole within each stratum.</li>
+</ol>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><sup><em>Source: OpenIntro.Org</em></sup></p>
+<p><strong>Example: Stratified Sampling</strong></p>
+<p>Design a sample to survey <span class="math inline">\(500\)</span> students using stratified sampling method.</p>
+<p><span class="math display">\[ \text { Strata Sizes }  
+\bbox[white,4px]
+{
+\color{black}
+{
+\begin{array}{c|c|c|c}
+\text{Gender}  &amp; \text{Undergraduate} &amp; \text{Graduate} &amp; \text{Total} \\
+\hline
+\text{Female} &amp; \text{3355} &amp; \text{4693} &amp; \text{8048} \\
+\text{Male} &amp; \text{3734} &amp; \text{6687} &amp; \text{10421} \\
+\hline
+\text{Total} &amp; \text{7089} &amp; \text{11380} &amp; \text{18469} \\
+\end{array}
+}
+}
+\]</span></p>
+<p><span class="math display">\[ \text { Strata Proportions } 
+\bbox[yellow,4px]
+{
+\color{black}
+{
+\begin{array}{c|c|c|c}
+\text{Gender}  &amp; \text{Undergraduate} &amp; \text{Graduate} &amp; \text{Total} \\
+\hline
+\text{Female} &amp; \text{3355/18469 = .182} &amp; \text{.254} &amp; \text{.436} \\
+\text{Male} &amp; \text{.202} &amp; \text{.362} &amp; \text{.564} \\
+\hline
+\text{Total} &amp; \text{.384} &amp; \text{.616} &amp; \text{1.000} \\
+\end{array}
+}
+}
+\]</span></p>
+<p><span class="math display">\[ \text { Sample sizes }   
+\bbox[lightblue,4px]
+{
+\color{black}
+{
+\begin{array}{c|c|c|c}
+\text{Gender}  &amp; \text{Undergraduate} &amp; \text{Graduate} &amp; \text{Total} \\
+\hline
+\text{Female} &amp; \text{.182(500)=91} &amp; \text{127} &amp; \text{218} \\
+\text{Male} &amp; \text{101} &amp; \text{181} &amp; \text{282} \\
+\hline
+\text{Total} &amp; \text{192} &amp; \text{308} &amp; \text{500} \\
+\end{array}
+}
+}
+\]</span></p>
+<p><strong>Practice</strong></p>
+<p>Design a sample to survey <span class="math inline">\(1200\)</span> students using stratified sampling method.</p>
+<p><span class="math display">\[  
+\bbox[white,4px]
+{
+\color{black}
+{
+\begin{array}{c|c|c|c}
+\text{Gender}  &amp; \text{Undergraduate} &amp; \text{Graduate} &amp; \text{Professional} \\
+\hline
+\text{Female} &amp; \text{10588} &amp; \text{4475} &amp; \text{1421} \\
+\text{Male} &amp; \text{7762} &amp; \text{3736} &amp; \text{1153} \\
+\hline
+\end{array}
+}
+}
+\]</span></p>
+</div>
+<div id="cluster-sampling" class="section level2" number="2.11">
+<h2><span class="header-section-number">2.11</span> Cluster Sampling</h2>
+<ol style="list-style-type: decimal">
+<li>The population is often divided into <span style="color:#b2182b"> <strong>non-overlapping mutually homogeneous yet internally heterogeneous</strong></span> subgroups called <span style="color:#b2182b"> <strong>clusters.</strong> </span> Cluster sampling is much like SRS, but instead of randomly selecting <em>individuals</em>, SRS is applied to select clusters.
+<ul>
+<li>In other words, unlike stratified sampling, cluster sampling is most helpful when there is a lot of case-to-case variability within a cluster but the clusters themselves don’t look very different from one another. That is, we expect strata to be <span style="color:#b2182b"> <strong>self-similar (homogeneous),</strong> </span> while we expect clusters to be <span style="color:#b2182b"> <strong>diverse (heterogeneous).</strong> </span></li>
+</ul></li>
+<li>The elements in each cluster are then sampled. If all elements in each sampled cluster are sampled, then this is referred to as a <span style="color:#b2182b"> <strong>“one-stage” cluster sampling plan.</strong> </span></li>
+<li>Sometimes cluster sampling can be a more economical random sampling technique
+than the alternatives. For example, if neighborhoods represented clusters, this sampling
+method works best when each neighborhood is very diverse. Because each neighborhood
+itself encompasses diversity, a cluster sample can reduce the time and cost associated with
+data collection, because the interviewer would need only go to some of the neighborhoods
+rather than to all parts of a city, in order to collect a useful sample.</li>
+</ol>
+<p><strong>One-Stage Cluster Sampling</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><sup><em>Source: OpenIntro.Org</em></sup></p>
+<p><strong>Multistage Cluster Sampling</strong></p>
+<p>A <span style="color:#b2182b"> <strong>“multistage” or “multistage cluster”</strong> </span> sampling is an extention of cluster sampling and involves two (or more) steps.</p>
+<ol style="list-style-type: decimal">
+<li>First step is to take a cluster sample.</li>
+<li>Then, instead of including all of the individuals in these clusters in the sample, a second sampling method,
+usually SRS, is employed within each of the selected clusters.</li>
+</ol>
+<p>In the neighborhood example, we could first randomly select some number of neighborhoods and then take a SRS from just those selected neighborhoods. As seen in Figure, stratified sampling requires observations to be sampled from every stratum. Multistage sampling selects observations only from those clusters that were randomly selected in the first step.</p>
+<p>It is also possible to have more than two steps in multistage sampling. Each cluster may be naturally divided into subclusters. For example, each neighborhood could be
+divided into streets. To take a three-stage sample, we could first select some number of clusters (neighborhoods), and then, within the selected clusters, select some number of
+subclusters (streets). Finally, we could select some number of individuals from each of the selected streets.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><sup><em>Source: OpenIntro.Org</em></sup></p>
+</div>
+<div id="nonrandom-sampling" class="section level2" number="2.12">
+<h2><span class="header-section-number">2.12</span> Nonrandom Sampling</h2>
+<p><span style="color:#386cb0"> <strong>Systematic Sampling</strong> </span></p>
+<p>Select every <span class="math inline">\(k^{th}\)</span> individual froma list of the population, where the position of the first person chosen is randomly selected from the <span class="math inline">\(k\)</span> individuals. This will give a non-representative sample if there is a structure to the list.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><sup><em>Source: OpenIntro.Org</em></sup></p>
+<p><strong>Solve:</strong></p>
+<p>The human resource department at a certain company wants to conduct a survey regarding worker benefits. The department has an alphabetical list of all <span class="math inline">\(5465\)</span> employees at the company and wants to conduct a systematic sample of size <span class="math inline">\(60\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>What is <span class="math inline">\(k\)</span>?</p></li>
+<li><p>Determine the individuals who will be administered the survey. Randomly select a number from <span class="math inline">\(1\)</span> to <span class="math inline">\(k\)</span>. Suppose that we randomly select <span class="math inline">\(10\)</span>. Starting with the first individual selected, the individuals in the survey will be</p></li>
+</ol>
+<p><span style="color:#386cb0"> <strong>Convenience or Volunteer Sampling</strong> </span><br />
+Use the first <span class="math inline">\(n\)</span> individuals that are available or the individuals who volunteer to participate. This is almost sure to give a non-representative sample which cannot be generalized to the population.</p>
+<hr />
+<p><strong>Example: Non-Representative Sample</strong></p>
+<div class="centered">
+<img src="Literary%20Digest.png" />
+</div>
+<p><strong>Survey</strong></p>
+<ul>
+<li>Surveyed 10 million people who were subcribers or had telephones.</li>
+<li>2.4 million people responded (i.e. 24% response rate)</li>
+</ul>
+<p><strong>Prediction</strong><br />
+Landslide victory of Landon.</p>
+<p><strong>Election Result</strong><br />
+Landslide victory of Roosevelt.</p>
+<p><strong>What did go wrong with the poll?</strong></p>
+<ul>
+<li>Sample was drawn from telephone directories, club membership, magazine subscibers, etc. who were upper middle class people, largely excluding poor unemployed people.</li>
+<li>The sample suffered from both selection and nonresponse bias.</li>
+</ul>
+<hr />
+<p><strong>Exercise: Identifying Sampling Methods</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>A researcher randomly selects 20 Taco Bell locations and surveys all the employees at those locations.</p></li>
+<li><p>A news station hosts a call-in survey about whether physician-assisted death should be legalized in all states.</p></li>
+<li><p>A researcher randomly selects an LED TV out of the first 200 LED TVs on an assembly line and also selects every 200th LED TV after that.</p></li>
+<li><p>In a study at a community college, 30 instructors are randomly selected from fulltime instructors and 50 instructors are selected from part-time instructors.</p></li>
+<li><p>The City Hall of Spring Hill, Kansas, creates a frame of its 5730 residents and randomly selects 60 residents.</p></li>
+</ol>
+</div>
+<div id="explanatory-and-response-variables" class="section level2" number="2.13">
+<h2><span class="header-section-number">2.13</span> Explanatory and Response Variables</h2>
+<p>In statistical studies, we want to know whether a variable <span class="math inline">\(x\)</span> explains (or affects) another variables <span class="math inline">\(y\)</span>.
+The <span class="math inline">\(x\)</span> variable is called the <strong>explanatory or independent variable</strong>.
+The <span class="math inline">\(y\)</span> variable is called the <strong>response or dependent variable</strong>.</p>
+<p><strong>Association vs. Causation</strong></p>
+<p>There is an <strong><em>association</em></strong> between an explanatory and response variable when the response variable changes as the explanatory variable changes.</p>
+<p>If the change in the explanatory variable <em>causes</em> the change in the response variable, then there is a <strong><em>causation</em></strong> between the variables.</p>
+</div>
+<div id="observational-studies" class="section level2" number="2.14">
+<h2><span class="header-section-number">2.14</span> Observational Studies</h2>
+<p>Generally, data in observational studies are collected on specific characteristics only by passively monitoring study participants, but the observers don’t attempt to modify the individuals being studied. These studies are inexpensive and good for discovering relationships related to rare outcomes. They are generally only sufficient to show associations.</p>
+<p>Types of observational studies:</p>
+<p><span style="color:#386cb0"> <strong>1. Cross-sectional Studies</strong> </span>
+- data are observed, measured, and collected at one point in time, not over a period of time.</p>
+<p><span style="color:#386cb0"> <strong>2. Retrospective Studies</strong> </span>
+- data are collected from a past time period by going back in time (through examinations of records, interviews, and so on).</p>
+<p><span style="color:#386cb0"> <strong>3. Prospective (or longitudinal or cohort) Studies</strong> </span>
+- data are collected in the future from groups that share common factors (such groups are called cohorts).</p>
+<p><strong>Case Study 1: why did Fido and Fluffy die?</strong></p>
+<p><img src="fido-and-fluffy.png" /></p>
+<p>Early 2007, many dogs and cats died of kidney failure. Should you conduct a retrospective or prospective study to find out why?</p>
+<p><span style="color:#386cb0"> <strong>Retrospective Studies</strong> </span> could be appropriate since</p>
+<ul>
+<li>The event happened in the past.</li>
+<li>It may have been a rare event.</li>
+<li>The retrospective study may provide clues on the cause.</li>
+</ul>
+<p>Once possible causes are identified, try a <span style="color:#386cb0"> <strong>Prospective Studies</strong> </span> to verify the causes - if it doesn’t kill any pets.</p>
+<p><strong>Case Study 2: drinking coffee and longevity</strong></p>
+<p>Coffee drinkers may live longer - <em>nytimes.com, May 16, 2012.</em></p>
+<p>Coffee may help you live longer, study suggests - <em>thestar.com, May 17, 2012.</em></p>
+<p>No, drinking coffee probably won’t make you live longer - <em>washingtonpost.com, May 17, 2012.</em></p>
+<p>Association of coffee drinking with total and cause-specific mortality," <em>New England Journal of Medicine</em>, May 2012.</p>
+<p>Sample Size: <strong>400,000</strong></p>
+<p>Age Range: <strong>50-71</strong> years</p>
+<p>Period: <strong>1995 - 2008</strong></p>
+<p>Death: <strong>52,000</strong></p>
+<p>How would you interpret the result?</p>
+</div>
+<div id="confounding-variable" class="section level2" number="2.15">
+<h2><span class="header-section-number">2.15</span> Confounding Variable</h2>
+<p>A <strong>confounding variable</strong> is a variable that is associated with both the explanatory and response variables. Simultaneously with the explanatory variable, it may cause the response variable to change during the study. Because of the confounding variable’s association with both variables, we do not know if the response is due to the explanatory variable or due to the confounding variable.</p>
+<p></br></p>
+<div class="centered">
+<p><img src="confound_1.png" width="674" /></p>
+</div>
+<p><strong>Sun exposure</strong> is a confounding factor because it is associated with both the use of
+sunscreen and the development of skin cancer. People who are out in the sun all day are
+more likely to use sunscreen, and people who are out in the sun all day are more likely to get
+skin cancer.</p>
+</div>
+<div id="lurking-variable" class="section level2" number="2.16">
+<h2><span class="header-section-number">2.16</span> Lurking Variable</h2>
+<p><strong>Lurking variables</strong> are variables that are not considered in the analysis, but may affect the nature of the relationship between the explanatory variable and the outcome.</p>
+<div class="centered">
+
+<p>Table: 20-year survival status of women by smoking status</p>
+<p><span class="math display">\[
+\begin{array}{c|lcr}
+&amp; \text{Smoker} \\
+&amp; \text{Yes} &amp; \text{No} \\
+\hline
+\text {Dead} &amp; 0.239 &amp; 0.314 \\
+\text {Alive} &amp; 0.761 &amp; 0.686
+\end{array}
+\]</span></p>
+<p><strong>Are smokers less likely to die?</strong></p>
+<p><img src="lurking%20var%20-%20smokers.png" width="1053" /></p>
+</div>
+<div id="experimental-design" class="section level2" number="2.17">
+<h2><span class="header-section-number">2.17</span> Experimental Design</h2>
+<p>While observational studies are effective tools for answering certain research questions, experiments are essential to measure the effect of a treatment. In an experiment, we apply some treatment and then proceed to observe its effects on the individuals.</p>
+<p><strong>Subject:</strong> Entity who is participating in the study.</p>
+<p><strong>Treatment Group:</strong> The group of subjects that receives treatments.</p>
+<p><strong>Control Group:</strong> The group of subjects that receives no treatment.</p>
+<p><strong>Response Variable:</strong> The outcome of interest, measured on each subject.</p>
+<p><strong>Factor:</strong> The categorical variable that explains the outcome of the experiment. Each category is called <span style="color:#386cb0"> <strong>level.</strong> </span></p>
+<p><strong>Blinding:</strong> When researchers keep the subjects uninformed about their treatment, the study is said to be <strong>blind</strong>. Its purpose is to reduce the potential for both researchers’ and subjects’ emotional bias.</p>
+<ul>
+<li>Subjects would not know which experimental group they are assigned to.</li>
+<li>The researcher (i.e. the person who is measuring the outcome) would not know which treatment is assigned to which experimental unit.</li>
+</ul>
+<p><span style="color:#386cb0"> <strong>Single-blind:</strong> </span> only one type of blinding is applied.<br />
+<span style="color:#386cb0"> <strong>Double-blind:</strong> </span> both types of blinding are applied.</p>
+<p><strong>Placebo:</strong> A substance or treatment with no active ingredients. The control group receives the placebo treatment.</p>
+<p>This phenomenon, in which the recipient perceives an improvement in condition due to personal expectations, rather than the treatment itself, is known as the <strong>placebo effect.</strong></p>
+<p><strong>Principles of Experimental Design</strong></p>
+<p>Well-conducted experiments are built on three main principles.</p>
+<p><span style="color:#386cb0"> <strong>Direct Control</strong> </span></p>
+<p>Researchers assign treatments to cases, and they do their best to control any other differences in the groups. They want the groups to be as identical as possible <em>except for the treatment</em>, so that at the end of the experiment any difference in response between the groups can be attributed to the treatment and not to some other confounding or lurking variable. <strong>Direct control refers to variables that the researcher can control, or make the same.</strong></p>
+<p><span style="color:#386cb0"> <strong>Randomization</strong> </span></p>
+<p>Researchers randomize patients into treatment groups to account for variables that cannot be controlled. Randomizing patients into the treatment or control group helps even out the effects of such differences, and it also prevents accidental bias from entering the study.</p>
+<p><span style="color:#386cb0"> <strong>Replication</strong> </span></p>
+<p>In a single study, replication is done by imposing the treatment on a sufficiently large number of subjects or experimental units. Scientists may also replicate the entire experiment on an entirely different population of experimental units to verify earlier findings.</p>
+</div>
+<div id="randomized-and-blocked-design" class="section level2" number="2.18">
+<h2><span class="header-section-number">2.18</span> Randomized and Blocked Design</h2>
+<p><img src="figureShowingBlocking.png" /></p>
+<p>A <strong>completely randomized experiment</strong> is one in which the subjects or experimental units are randomly assigned to each group in the experiment.</p>
+<p>Researchers sometimes know or suspect that another variable, other than the treatment, influences the response. Under these circumstances, they may carry out a <strong>blocked experiment.</strong> In this design, they first group individuals into blocks based on the identified variable and then randomize subjects within each block to the treatment groups. This strategy is referred to as <strong>blocking.</strong></p>
+<p><sup><em>Source: OpenIntro.Org</em></sup></p>
+<p><strong>Case Study 1: PATRICIA Study | PApilloma TRIal against Cancer In young Adults</strong></p>
+<p><sup><em>The Lancet, Volume 374, Issue 9686, Pages 301 - 314, 25 July 2009</em></sup></p>
+<p>Efficacy of human papillomavirus (HPV) - 16/18 AS04-adjuvanted vaccine against cervical infection and precancer caused by oncogenic HPV types (PATRICIA); final analysis of a <strong>double-blind, randomized study in young women.</strong></p>
+<p><sup><em>Paavonen, et. al.</em></sup></p>
+<p><span class="math display">\[
+\begin{array}{c|c}
+{\text{Response Variable} \\ \text {(Acquired an infection)}}  &amp; {\text{Explanatory Variable} \\ \text{(Given the HPV vaccine)}} \\
+\hline
+\text{Yes} &amp; \text{Yes} \\
+\text{No} &amp; \text{No} \\
+\end{array}
+\]</span></p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{c}
+{\text{Factor 1} \\ \text{(2 Levels)}} \\
+\hline
+\text{Drug A} \\
+\text{Drug B} 
+\end{array}
+}
+}
+\]</span></p>
+<p><span class="math display">\[ \bbox[silver,5px]
+{
+\color{black}
+{
+\begin{array}{c}
+{\text{Factor 2} \\ \text{(2 Levels)}} \\
+\hline
+\text{Dose A} \\
+\text{Dose B} 
+\end{array}
+}
+}
+\]</span></p>
+<p><span class="math display">\[ \bbox[5px,border:2px solid red]
+{
+\begin{array}{c}
+\text{4 Treatments} \\
+\hline
+\text{Drug A &amp; Dose A}\\
+\text{Drug A &amp; Dose B}\\
+\text{Drug B &amp; Dose A}\\
+\text{Drug B &amp; Dose B}
+\end{array}
+}
+\]</span></p>
+<p><strong>Case Study 2: Ischemic Preconditioning | Effect on Mascular Endurance</strong></p>
+<p>Can Ischemic Preconditioning improve athletic performance?</p>
+<ol style="list-style-type: decimal">
+<li>Experimental units: 40 male teenagers</li>
+<li>Response Variable: length of time a wall squat position can be held</li>
+<li>Control Groups: 2 groups who received 0 lb pressure</li>
+<li>Control of Extraneous Factors: Age, sex, athletic ability</li>
+<li>Randomization: Randomly assigned 10 experimental units to each of 4 treatment groups</li>
+</ol>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}
+{
+\begin{array}{c|c}
+\text{Factor1}  &amp; {\text{Amount of pressure} \\ \text{applied by the} \\ \text{bloodpressure cuff}} \\
+\hline
+\text{Level 1} &amp; \text{20 lb} \\
+\text{Level 2} &amp; \text{0 lb} \\
+\end{array}
+}
+}
+\]</span></p>
+<p><span class="math display">\[ \bbox[silver,5px]
+{
+\color{black}
+{
+\begin{array}{c|c}
+\text{Factor2}  &amp; {\text{Length of time pressure} \\ \text{was applied}} \\
+\hline
+\text{Level 1} &amp; \text{10 min} \\
+\text{Level 2} &amp; \text{20 min} \\
+\end{array}
+}
+}
+\]</span></p>
+<p><span class="math display">\[ \bbox[5px,border:2px solid red]
+{
+\begin{array}{c}
+\text{4 Treatments} \\
+\hline
+\text{20 lb/10 min}\\
+\text{20 lb/20 min}\\
+\text{0 lb/ 10 min}\\
+\text{0 lb/ 20 min}
+\end{array}
+}
+\]</span></p>
+<p><strong>Components of a Well-Designed Study</strong></p>
+<ul>
+<li>There should be a control group and at least one treatment group.</li>
+<li>Individuals should be randomly assigned to the control and treatment group(s).</li>
+<li>The sample size should be large enough.</li>
+<li>A placebo should be used when appropriate.</li>
+<li>The study should be double-blind when possible. If this is impossible, then the study should be single-blind if possible.</li>
+</ul>
+<p><strong>Practice: Identifying an Experiment and an Observational Study</strong></p>
+<p>Identify whether the study is an experiment or an observational study. Discuss whether the components of a good study were used.</p>
+<p>For five years, the author taught an innovative intermediate algebra course in which students learned by working in groups. Then the author compared the proportion of his successful intermediate algebra students who passed trigonometry with the proportion of other professors’ successful intermediate algebra students who passed trigonometry.</p>
+<p><strong>Practice: Redesign an Observational Study into a Well-Designed Experiment</strong></p>
+<p>A researcher wants to determine whether taking vitamin C helps people avoid getting the flu and the common cold. She randomly selects 100 people and asks them whether they take vitamin C and how often they had the flu or a cold in the past year. The researcher analyzes the responses and concludes that vitamin C helps people avoid the flu and colds.</p>
+<ol style="list-style-type: decimal">
+<li><p>Describe some problems with the observational study. Include in your description at least one possible lurking or confounding variable and identify which type it is.</p></li>
+<li><p>Redesign the study so that it is a well-designed experiment.</p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="graphical-and-tabular-displays-of-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 3
+},
+"edit": {
+"link": "https://github.com/amlanbanerjee/pathway_to_statistics/edit/master/02-experiment.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/amlanbanerjee/pathway_to_statistics/blob/master/02-experiment.Rmd",
+"text": null
+},
+"download": ["pathway_to_statistics.pdf", "pathway_to_statistics.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
