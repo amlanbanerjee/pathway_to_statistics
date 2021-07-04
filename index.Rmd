@@ -3,6 +3,7 @@ title: "Pathway to Introductory Statistics"
 author: "Amlan Banerjee, Ph.D."
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+documentclass: book
 output: 
   bookdown::gitbook:
           config:
@@ -10,6 +11,7 @@ output:
               theme: 'white'
               family: 'serif'
               size: 3
+            download: ["book.pdf"]
 ---
 
 

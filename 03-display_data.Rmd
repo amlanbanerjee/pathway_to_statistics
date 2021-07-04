@@ -351,7 +351,7 @@ histogram(email50$num_char,
 
 **Histogram | $\textbf{Density} = \dfrac{\textbf{relative frequency}}{\textbf{bin width}}$**
 
-Area of each bar is the relative frequency of its class.
+**In density histogram, area of each rectangular bar is the relative frequency of its class.**
 
 $$
 \begin{align}
@@ -399,13 +399,16 @@ ggplot(email50, aes(num_char, stat(density))) +
 ```
 
 
-1. Estimate the percentile of the number of characters 20.
+$\textbf{1. Estimate the percentile of the number of characters 20.}$
+
+In the density histogram, the percentile of any data point can be measured by summing the relative frequencies of all classes on the left of that data point. 
+
+In this case, the percentile of the number 20 is $0.14 + 0.64 = 0.78$
 
 
+$\textbf{2. Identify the class that contains the 75th percentile.}$
 
-
-2. Identify the class that contains the 75th percentile.
-
+Here, the summing happens in the reverse direction. We calculate the cumulative relative frequency starting from class $text{0-10}$ until we reach the desired percentile. We find that the class $10-20$ contains the  $75$th percentile since the cumulative relative frequency up to that class is $text{0.78}$.
 
 
 **Cumulative Frequency Histogram**
