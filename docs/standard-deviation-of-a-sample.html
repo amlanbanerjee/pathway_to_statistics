@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Standard Deviation of a Sample | Pathway to Introductory Statistics</title>
+  <meta name="description" content="Chapter 5 Standard Deviation of a Sample | Pathway to Introductory Statistics" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Standard Deviation of a Sample | Pathway to Introductory Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Standard Deviation of a Sample | Pathway to Introductory Statistics" />
+  
+  
+  
+
+<meta name="author" content="Amlan Banerjee, Ph.D." />
+
+
+<meta name="date" content="2021-06-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="summarizing-data-numerically.html"/>
+
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Pathway to Introductory Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Performing Operations and Evaluating Expressions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#multiplication-of-fractions"><i class="fa fa-check"></i><b>1.1</b> Multiplication of Fractions</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#division-of-fractions"><i class="fa fa-check"></i><b>1.2</b> Division of Fractions</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#addition-and-subtraction-of-fractions"><i class="fa fa-check"></i><b>1.3</b> Addition and Subtraction of Fractions</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#cross-multiplication"><i class="fa fa-check"></i><b>1.4</b> Cross Multiplication</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#exponent"><i class="fa fa-check"></i><b>1.5</b> Exponent</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#order-of-operations"><i class="fa fa-check"></i><b>1.6</b> Order of Operations</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html"><i class="fa fa-check"></i><b>2</b> Design Observational Studies and Experiments</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#variable"><i class="fa fa-check"></i><b>2.1</b> Variable</a></li>
+<li class="chapter" data-level="2.2" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#statistics"><i class="fa fa-check"></i><b>2.2</b> Statistics</a></li>
+<li class="chapter" data-level="2.3" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#data-collection"><i class="fa fa-check"></i><b>2.3</b> Data Collection</a></li>
+<li class="chapter" data-level="2.4" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#sampling-from-a-population"><i class="fa fa-check"></i><b>2.4</b> Sampling from a Population</a></li>
+<li class="chapter" data-level="2.5" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#statistical-inference"><i class="fa fa-check"></i><b>2.5</b> Statistical Inference</a></li>
+<li class="chapter" data-level="2.6" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#sampling-errors"><i class="fa fa-check"></i><b>2.6</b> Sampling Errors</a></li>
+<li class="chapter" data-level="2.7" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#bias-and-precision"><i class="fa fa-check"></i><b>2.7</b> Bias and Precision</a></li>
+<li class="chapter" data-level="2.8" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#parameter-and-statistic"><i class="fa fa-check"></i><b>2.8</b> Parameter and Statistic</a></li>
+<li class="chapter" data-level="2.9" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#simple-random-sampling-srs"><i class="fa fa-check"></i><b>2.9</b> Simple Random Sampling (SRS)</a></li>
+<li class="chapter" data-level="2.10" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#stratified-sampling"><i class="fa fa-check"></i><b>2.10</b> Stratified Sampling</a></li>
+<li class="chapter" data-level="2.11" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#cluster-sampling"><i class="fa fa-check"></i><b>2.11</b> Cluster Sampling</a></li>
+<li class="chapter" data-level="2.12" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#nonrandom-sampling"><i class="fa fa-check"></i><b>2.12</b> Nonrandom Sampling</a></li>
+<li class="chapter" data-level="2.13" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#explanatory-and-response-variables"><i class="fa fa-check"></i><b>2.13</b> Explanatory and Response Variables</a></li>
+<li class="chapter" data-level="2.14" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#observational-studies"><i class="fa fa-check"></i><b>2.14</b> Observational Studies</a></li>
+<li class="chapter" data-level="2.15" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#confounding-variable"><i class="fa fa-check"></i><b>2.15</b> Confounding Variable</a></li>
+<li class="chapter" data-level="2.16" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#lurking-variable"><i class="fa fa-check"></i><b>2.16</b> Lurking Variable</a></li>
+<li class="chapter" data-level="2.17" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#experimental-design"><i class="fa fa-check"></i><b>2.17</b> Experimental Design</a></li>
+<li class="chapter" data-level="2.18" data-path="design-observational-studies-and-experiments.html"><a href="design-observational-studies-and-experiments.html#randomized-and-blocked-design"><i class="fa fa-check"></i><b>2.18</b> Randomized and Blocked Design</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html"><i class="fa fa-check"></i><b>3</b> Graphical and Tabular Displays of Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#descriptive-statistics"><i class="fa fa-check"></i><b>3.1</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="3.2" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#univariate-categorical-variable"><i class="fa fa-check"></i><b>3.2</b> Univariate Categorical Variable</a></li>
+<li class="chapter" data-level="3.3" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#interpreting-a-multiple-bar-graph"><i class="fa fa-check"></i><b>3.3</b> Interpreting a Multiple Bar Graph</a></li>
+<li class="chapter" data-level="3.4" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#univariate-continuous-variable"><i class="fa fa-check"></i><b>3.4</b> Univariate Continuous Variable</a></li>
+<li class="chapter" data-level="3.5" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#dotplot"><i class="fa fa-check"></i><b>3.5</b> Dotplot</a></li>
+<li class="chapter" data-level="3.6" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#stemplots"><i class="fa fa-check"></i><b>3.6</b> Stemplots</a></li>
+<li class="chapter" data-level="3.7" data-path="graphical-and-tabular-displays-of-data.html"><a href="graphical-and-tabular-displays-of-data.html#histogram"><i class="fa fa-check"></i><b>3.7</b> Histogram</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="summarizing-data-numerically.html"><a href="summarizing-data-numerically.html"><i class="fa fa-check"></i><b>4</b> Summarizing Data Numerically</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="summarizing-data-numerically.html"><a href="summarizing-data-numerically.html#shape-of-a-distribution"><i class="fa fa-check"></i><b>4.1</b> Shape of a Distribution</a></li>
+<li class="chapter" data-level="4.2" data-path="summarizing-data-numerically.html"><a href="summarizing-data-numerically.html#measures-of-center"><i class="fa fa-check"></i><b>4.2</b> Measures of Center</a></li>
+<li class="chapter" data-level="4.3" data-path="summarizing-data-numerically.html"><a href="summarizing-data-numerically.html#measures-of-spread-or-variation"><i class="fa fa-check"></i><b>4.3</b> Measures of Spread or Variation</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html"><i class="fa fa-check"></i><b>5</b> Standard Deviation of a Sample</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#normal-distribution-68-95-99.7-rule"><i class="fa fa-check"></i><b>5.1</b> Normal Distribution | 68-95-99.7 Rule</a></li>
+<li class="chapter" data-level="5.2" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#percentiles-and-quartiles"><i class="fa fa-check"></i><b>5.2</b> Percentiles and Quartiles</a></li>
+<li class="chapter" data-level="5.3" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#outlier-and-fences"><i class="fa fa-check"></i><b>5.3</b> <span style="color:#386cb0"> <strong>Outlier and Fences</strong> </span></a></li>
+<li class="chapter" data-level="5.4" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#box-plot"><i class="fa fa-check"></i><b>5.4</b> Box Plot</a></li>
+<li class="chapter" data-level="5.5" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#example-drawing-a-boxplot-with-an-outlier"><i class="fa fa-check"></i><b>5.5</b> Example: Drawing a Boxplot with an Outlier</a></li>
+<li class="chapter" data-level="5.6" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#linear-transformation-of-normal-curve-standardizing-with-z-scores"><i class="fa fa-check"></i><b>5.6</b> Linear Transformation of Normal Curve | Standardizing with Z-Scores</a></li>
+<li class="chapter" data-level="5.7" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#linear-transformation-normal-curve-to-standard-normal-curve"><i class="fa fa-check"></i><b>5.7</b> Linear Transformation | Normal Curve to Standard Normal Curve</a></li>
+<li class="chapter" data-level="5.8" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#the-standard-normal-curve"><i class="fa fa-check"></i><b>5.8</b> The Standard Normal Curve</a></li>
+<li class="chapter" data-level="5.9" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#altering-sd"><i class="fa fa-check"></i><b>5.9</b> Altering SD</a></li>
+<li class="chapter" data-level="5.10" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#group-comparison"><i class="fa fa-check"></i><b>5.10</b> Group Comparison</a></li>
+<li class="chapter" data-level="5.11" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#smoothing-plot-moving-average"><i class="fa fa-check"></i><b>5.11</b> Smoothing Plot: Moving Average</a></li>
+<li class="chapter" data-level="5.12" data-path="standard-deviation-of-a-sample.html"><a href="standard-deviation-of-a-sample.html#transformation-of-the-data"><i class="fa fa-check"></i><b>5.12</b> Transformation of the Data</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Pathway to Introductory Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="standard-deviation-of-a-sample" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Standard Deviation of a Sample</h1>
+<ul>
+<li>SD <span class="math inline">\((s)\)</span> of a set of sample values is a measure of how much, on average, the data values deviate away from the sample mean.</li>
+<li>In other word, SD describes the variability of the data set within the range of the dataset.
+<ul>
+<li>Low variability or small spread means that the values tend to be more clustered together.</li>
+<li>High variability or large spread means that the values tend to be far apart.</li>
+</ul></li>
+</ul>
+<p><span style="color:#386cb0"><br />
+<strong>Calculating the Standard Deviation</strong>
+</span></p>
+<p>The standard deviation is the square root of the variance. It is roughly the average distance of the observations from the mean.</p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}{s= \sqrt{\frac{1}{n-1}\sum(x_i-\bar x)^2}}
+}
+\]</span></p>
+<p><span class="math inline">\(Calculate \space SD \space of \space [0,1]\)</span></p>
+<p><span class="math inline">\(Calculate \space SD \space of \space [30,20, 41, 21]\)</span></p>
+<p><strong>Which histogram has the largest SD?</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>Notice the spread of the distributions.</p>
+<p><strong>Standard Deviation of a Population</strong></p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}{\sigma= \sqrt{\frac{1}{N}\sum(x_i-\mu)^2}}
+}
+\]</span>
+<span style="color:#386cb0">
+<strong>Variance of a Sample and Population</strong>
+</span></p>
+<p>The <strong>variance</strong> of a set of values is a measure of variation equal to the square of the standard variation.</p>
+<ul>
+<li>Sample variance: <span class="math inline">\(s^2 =\)</span> square of the sample standard deviation <span class="math inline">\(s\)</span>.</li>
+<li>Population variance: <span class="math inline">\(\sigma^2 =\)</span> square of the population standard deviation <span class="math inline">\(\sigma\)</span>.</li>
+</ul>
+<p><span style="color:#386cb0">
+<strong>Coefficient of Variation</strong>
+</span></p>
+<p>The <strong>coefficient of variation (CV)</strong> for a set of nonnegative sample or population data, expressed as a percent, describes the standard deviation relative to the mean, and is given by the following:</p>
+<p><span class="math display">\[
+Sample: CV = \frac{s}{x}.100 \\
+Population: CV = \frac{\sigma}{x}.100
+\]</span></p>
+<div id="normal-distribution-68-95-99.7-rule" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Normal Distribution | 68-95-99.7 Rule</h2>
+<p>Probabilities for falling 1, 2, and 3 standard deviations of the mean in a normal distribution.</p>
+<p><img src="6895997.png" width="800px" /></p>
+</div>
+<div id="percentiles-and-quartiles" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Percentiles and Quartiles</h2>
+<ul>
+<li>Percentiles divide the data in one hundred groups.</li>
+<li>The <strong><span class="math inline">\(n^{th}\)</span> percentile</strong> is the data value such that <span class="math inline">\(n^{th}\)</span> percent of the data lies below that value.</li>
+</ul>
+<p><span class="math display">\[
+\text{Percentile of value x} = \frac{\text{number of values less than x}}{\text{total number of values}} \times 100
+\]</span></p>
+<p><span style="color:#386cb0">
+<strong>Three Quartiles <span class="math inline">\((Q_1, Q_2, Q_3)\)</span></strong><br />
+</span></p>
+<ul>
+<li><span class="math inline">\(Q_1\)</span> represents the <strong>first quartile</strong>, which is the 25th percentile, and is the median of the smaller half of the data set.</li>
+<li><span class="math inline">\(Q_2\)</span> represents the <strong>second quartile</strong>, which is equivalent to the 50th percentile (i.e. the median).</li>
+<li><span class="math inline">\(Q_3\)</span> represents the <strong>third quartile</strong>, or 75th percentile, and is the median of the larger half of the data set<br />
+</li>
+<li>Interquartile Range <span class="math inline">\((IQR) = Q_3 - Q_1\)</span></li>
+</ul>
+</div>
+<div id="outlier-and-fences" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> <span style="color:#386cb0"> <strong>Outlier and Fences</strong> </span></h2>
+<p>When in the context of a box plot, define an outlier as an observation that</p>
+<ul>
+<li><p>right fence: <span class="math display">\[ &gt; Q_3 + 1.5 \times IQR \]</span></p></li>
+<li><p>left fence: <span class="math display">\[ &lt; Q_1 - 1.5 \times IQR \]</span></p></li>
+</ul>
+<p>Such points are marked using a dot or asterisk in a box plot.</p>
+</div>
+<div id="box-plot" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Box Plot</h2>
+<p>Data: <span class="math inline">\([5, 5, 9, 10, 15, 16, 20, 30, 40]\)</span></p>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   5.00    9.00   15.00   16.67   20.00   40.00 </code></pre>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+</div>
+<div id="example-drawing-a-boxplot-with-an-outlier" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Example: Drawing a Boxplot with an Outlier</h2>
+<p>Students in one of the author’s statistics classes were surveyed about the number of novels they read in the past year. Here are the anonymous responses (in numbers of novels) of 11 of the students:</p>
+<p><span class="math inline">\([2, 5, 2, 0, 2, 3, 0, 5, 6, 4, 12]\)</span></p>
+<ol style="list-style-type: decimal">
+<li>Construct a boxplot.</li>
+<li>What is the meaning of the outlier?</li>
+</ol>
+</div>
+<div id="linear-transformation-of-normal-curve-standardizing-with-z-scores" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Linear Transformation of Normal Curve | Standardizing with Z-Scores</h2>
+<p>Consider a normally distributed random variable <span class="math inline">\(x\)</span> with mean <span class="math inline">\(\mu\)</span> and sd <span class="math inline">\(\sigma\)</span>: <span class="math inline">\(x \tilde \space N(\mu, \sigma)\)</span></p>
+<p>Two-step linear transformation of <span class="math inline">\(x\)</span></p>
+<ol style="list-style-type: decimal">
+<li>subtract <span class="math inline">\(\mu\)</span> from <span class="math inline">\(x\)</span><br />
+</li>
+<li>divide <span class="math inline">\((x-\mu)\)</span> by <span class="math inline">\(\sigma\)</span></li>
+</ol>
+<p><span class="math display">\[\bbox[yellow,5px]{\color{black}{\text{standard normal deviate: } z = \frac {x-\mu}{\sigma}}}\]</span></p>
+<p>The <strong>Z-score</strong> of an observation is defined as the number of standard deviations it falls above or bemow the mean. If the observation is one standard deviation above the mean, its Z-score is 1. If it is 1.5 standard deviations below the mean, then its Z-score is -1.5.</p>
+</div>
+<div id="linear-transformation-normal-curve-to-standard-normal-curve" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> Linear Transformation | Normal Curve to Standard Normal Curve</h2>
+<p>The normal distribution model describes a symmetric, unimodal, bell-shaped curve. It can be adjusted using two parameters; mean <span class="math inline">\((\mu)\)</span> and standard deviation <span class="math inline">\((\sigma)\)</span>.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+</div>
+<div id="the-standard-normal-curve" class="section level2" number="5.8">
+<h2><span class="header-section-number">5.8</span> The Standard Normal Curve</h2>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-42-1.png" width="672" />
+<span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}{{\text {Density at z}} = \frac {1}{\sqrt {2\pi}}\exp{-\frac{1}{2}z^2}, -\infty&lt;z&lt;+\infty}
+}
+\]</span></p>
+<p>Optional Materials</p>
+</div>
+<div id="altering-sd" class="section level2" number="5.9">
+<h2><span class="header-section-number">5.9</span> Altering SD</h2>
+<div class="centered">
+<p><img src="Ch_34_Univariate_dist_varied_SD.png" width="700px" /></p>
+</div>
+</div>
+<div id="group-comparison" class="section level2" number="5.10">
+<h2><span class="header-section-number">5.10</span> Group Comparison</h2>
+<p><strong>Comparing distributions of median household income for counties by population gain status</strong></p>
+<p><img src="countyIncomeSplitByPopGain.png" width="800px" /></p>
+<p><sup><em>Source: OpenIntroOrg</em></sup></p>
+</div>
+<div id="smoothing-plot-moving-average" class="section level2" number="5.11">
+<h2><span class="header-section-number">5.11</span> Smoothing Plot: Moving Average</h2>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+</div>
+<div id="transformation-of-the-data" class="section level2" number="5.12">
+<h2><span class="header-section-number">5.12</span> Transformation of the Data</h2>
+<ul>
+<li>Data with outliers (i.e. skewed distribution) are hard to interpret</li>
+<li>Such data are often transformed into their logarithmic form to give the skewed distribution a normal (i.e. roughly unimodal and symmetric) shape for better interpretation</li>
+</ul>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="summarizing-data-numerically.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 3
+},
+"edit": {
+"link": "https://github.com/amlanbanerjee/pathway_to_statistics/edit/master/04-summarizing_data.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/amlanbanerjee/pathway_to_statistics/blob/master/04-summarizing_data.Rmd",
+"text": null
+},
+"download": ["pathway_to_statistics.pdf", "pathway_to_statistics.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

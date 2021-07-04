@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Pathway to Introductory Statistics</title>
-  <meta name="description" content="Pathway to Introductory Statistics" />
+  <title>Chapter 4 Summarizing Data Numerically | Pathway to Introductory Statistics</title>
+  <meta name="description" content="Chapter 4 Summarizing Data Numerically | Pathway to Introductory Statistics" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Pathway to Introductory Statistics" />
+  <meta property="og:title" content="Chapter 4 Summarizing Data Numerically | Pathway to Introductory Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Pathway to Introductory Statistics" />
+  <meta name="twitter:title" content="Chapter 4 Summarizing Data Numerically | Pathway to Introductory Statistics" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="design-observational-studies-and-experiments.html"/>
+<link rel="prev" href="graphical-and-tabular-displays-of-data.html"/>
+<link rel="next" href="random-process-and-probabillity.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -165,57 +165,244 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Pathway to Introductory Statistics</h1>
-<p class="author"><em>Amlan Banerjee, Ph.D.</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-07-04</em></p>
+<div id="summarizing-data-numerically" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Summarizing Data Numerically</h1>
+<p><strong>Learning Outcome:</strong></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Calculate measures of central tendency, position, and spread, including standard deviation.</td>
+</tr>
+</tbody>
+</table>
+<p>In this chapter, we will numerically describe distributions of quantitative variables. Distributions, such as histograms, can be described by three characteristics: shape, center, and spread.</p>
+<div id="measures-of-shape" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Measures of Shape</h2>
+<p><strong>Modes</strong></p>
+<p>The <strong>mode</strong> of some data is an observation with the greatest frequency. There can be more than one mode, but if all the observations have frequency 1, then there is no mode.</p>
+<p><strong>Mode is represented by a prominent peak in the distribution.</strong></p>
+<p><strong>1. Unimodel Distribution</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><strong>Bimodal Distribution</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><strong>Multimodal Distribution</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><strong>Uniform Distribution</strong></p>
+<p>All the bins have the same frequency, or at least close to the same frequency. It is a distribution without a mode.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p><strong>Symmetry</strong></p>
+<p>The histogram for a <strong>symmetric</strong> distribution will look the same on the left and the right of its center.</p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p><strong>Skew</strong></p>
+<ul>
+<li>A histogram is <strong>skewed right</strong> if the longer tail is on the right side of the mode.</li>
+<li>A histogram is <strong>skewed left</strong> if the longer tail is on the left side of the mode.</li>
+</ul>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p><strong>Outlier</strong></p>
+<ul>
+<li>An Outlier is a data value that is far above or far below the rest of the data values.</li>
+</ul>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
 </div>
-<div id="performing-operations-and-evaluating-expressions" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Performing Operations and Evaluating Expressions</h1>
-<p>This chapter reviews some basic arithmetic operations that form the foundation of statistics.</p>
-<div id="multiplication-of-fractions" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Multiplication of Fractions</h2>
-<p>If <span class="math inline">\(b \ne 0, \ d \ne 0\)</span>, then</p>
-<p><span class="math display">\[\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{ac}{bd}\]</span></p>
-</div>
-<div id="division-of-fractions" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Division of Fractions</h2>
-<p>If <span class="math inline">\(b \ne 0, \ c \ne 0, \ d \ne 0\)</span>, then</p>
-<p><span class="math display">\[\dfrac{a}{b} \div \dfrac{c}{d} = \dfrac{ad}{bc}\]</span></p>
-</div>
-<div id="addition-and-subtraction-of-fractions" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Addition and Subtraction of Fractions</h2>
-<p>If <span class="math inline">\(b \ne 0, \ d \ne 0\)</span>, then</p>
-<p><span class="math display">\[\dfrac{a}{b} \pm \dfrac{c}{d} = \dfrac{ad \pm bc}{bd}\]</span></p>
-</div>
-<div id="cross-multiplication" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Cross Multiplication</h2>
-<p>If <span class="math inline">\(b \ne 0, \ d \ne 0, \text{ and }\dfrac{a}{b} = \dfrac{c}{d}\)</span>, then</p>
-<p><span class="math display">\[ad = bc\]</span></p>
-</div>
-<div id="exponent" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Exponent</h2>
-<p><span class="math display">\[x^{-n} = \dfrac{1}{x^n}\]</span></p>
-</div>
-<div id="order-of-operations" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Order of Operations</h2>
-<p>We perform operations in the following order:</p>
+<div id="measures-of-center" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Measures of Center</h2>
+<p><strong>Mean</strong></p>
+<p>The sample mean of a numerical variable is computed as the sum of all of the observations divided by the number of observations:</p>
+<p><span class="math inline">\(\displaystyle \bar x = \sum_{i=1}^n x_i = \frac{(x_1+x_2+...+x_n)}{n}\)</span></p>
+<p>The mean follows the tail</p>
+<ul>
+<li>In a <strong><em>right skewed</em></strong> distribution, the mean is greater than the median.</li>
+<li>In a <strong><em>left skewed</em></strong> distribution, the mean is less than the median.</li>
+<li>In a <strong><em>symmetric</em></strong> distribution, the mean and median are approximately equal.</li>
+</ul>
+<p><strong>Median</strong></p>
+<p>The median splits an ordered data set in half. If there are an even number of observations, the median is the average of the two middle
+values. If there are an odd number of observations, the median is the middle value.</p>
+<pre><code> [1]  0  0  0  0  0  0  1  1  1  1  1  2  2  3  3  3  4  4  5  5  5  6  6  7  7
+[26]  7  9  9  9 10 10 10 11 11 12 14 14 16 17 22 25 25 25 26 26 27 29 42 43 64</code></pre>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p><strong>Calculating the Median</strong></p>
+<p><span style="color:#386cb0"> <span class="math inline">\(n\)</span> is odd </span></p>
 <ol style="list-style-type: decimal">
-<li>parentheses</li>
-<li>exponentiation</li>
-<li>multiplications and divisions from left to right</li>
-<li>additions and subtractions from left to right</li>
+<li>Sort the series in ascending order.<br />
+</li>
+<li>If the series has odd number <span class="math inline">\((n)\)</span> of entries, the median is at position <span class="math inline">\(\frac{n+1}{2}.\)</span><br />
+</li>
+<li>Find the median of the series: <span class="math inline">\(2,4,5,(6),7,9,9\)</span><br />
+</li>
+<li>The median is <span class="math inline">\(6.\)</span></li>
 </ol>
-<p>Example:</p>
+<p><span style="color:#386cb0"> <span class="math inline">\(n\)</span> is even </span></p>
+<ol style="list-style-type: decimal">
+<li>Sort the series in ascending order.<br />
+</li>
+<li>If the series has even number <span class="math inline">\((n)\)</span> of entries, the median is the average of the two middle numbers: <span class="math inline">\(\frac{n}{2},\frac{n+1}{2}.\)</span><br />
+</li>
+<li>Find the median of the numbers: <span class="math inline">\(2,2,4,6,7,8\)</span><br />
+</li>
+<li>Median is the average of the third and the fourth numbers: <span class="math inline">\(\frac{4+6}{2}=5\)</span></li>
+</ol>
+<p>Example: Comparing the Medians of Two Distributions</p>
 <p><span class="math display">\[
-\begin{align}
-&amp;   8^2 + 2(4-8)^2 \div (-2)  \\
-&amp; = 64 + 2(-4)^2 \div (-2)     \\
-&amp; = 64 + 2 \cdot 16 \div (-2)   \\
-&amp; = 64 - 16 \\
-&amp; = 48
-\end{align}
+\begin{array}{lclc}
+\text{Pacific State} &amp; \text{Minimum Wage} &amp; \text{Mountain State} &amp; \text{Minimum Wage} \\
+\hline
+\text {Alaska} &amp; 7.75 &amp; \text {Arizona} &amp; 7.90 \\
+\text {California} &amp; 8.00 &amp; \text {Colorado} &amp; 8.00 \\
+\text {Hawaii} &amp; 7.25 &amp; \text {Idaho} &amp; 7.25 \\
+\text {Oregon} &amp; 9.10 &amp; \text {Montana} &amp; 7.90 \\
+\text {Washington} &amp; 9.32 &amp; \text {Nevada} &amp; 8.25 \\
+                  &amp;       &amp; \text {New Mexico} &amp; 7.50 \\
+                  &amp;       &amp; \text {Utah} &amp; 7.25 \\
+                  &amp;       &amp; \text {Wyoming} &amp; 5.15 \\
+\end{array}
 \]</span></p>
+<p>Find the median minimum wages of the Pacific and Mountain states.</p>
+<p><strong>How the Shape of a Distribution Affects the Mean and the Median</strong></p>
+<ul>
+<li><p>If a distribution is <strong>skewed left</strong>, the mean is usually less than the median and the median is usually a better measure of the center.</p></li>
+<li><p>If a distribution is <strong>symmetric</strong>, the mean is approximately equal to the median and both are reasonable measures of the center.</p></li>
+<li><p>If a distribution is <strong>skewed right</strong>, the mean is usually greater than the median and the median is usually a better measure of the center.</p></li>
+</ul>
+<div class="columns-2">
+
+<p>List: <span class="math inline">\({2,3,3,4}\)</span><br />
+<img src="pathway_to_statistics_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p>List: <span class="math inline">\(2,3,3,7\)</span><br />
+<img src="pathway_to_statistics_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>Notice: The median is unaffected by outlier.</p>
+<p><strong>Weighted Mean</strong></p>
+<p>The weighted mean is the same as the mean, except that it is influenced more by some observations than others. We assign weights to observations as a sort of way of describing its relative importance.</p>
+<p>The weighted mean of observations <span class="math inline">\(x_1, x_2,...,x_n\)</span> using weights <span class="math inline">\(w_1, w_2,...,w_n\)</span> is given by</p>
+<p><span class="math inline">\(\displaystyle \bar x =\frac{w_1x_1+w_2x_2+...+w_nx_n}{w_1+w_2+...+w_n}\)</span></p>
+<div class="red4">
+<p>The simple mean is a weighted mean where all the weights are 1.</p>
+</div>
+<p><span class="math inline">\(\displaystyle \bar x =\frac{1\times x_1+1\times x_2+...+1\times x_n}{1+1+...+1} = \frac{x_1+x_2+...+x_n}{n}\)</span></p>
+<p><strong>Midrange</strong></p>
+<p>The <strong>midrange</strong> of a data set is the measure of center that is the value midway between the maximum and minimum values in the original data set. It is found by adding the maximum data value to the minimum data value and then dividing the sum by <span class="math inline">\(2\)</span>, as the following formula:</p>
+<p><span class="math display">\[
+Midrange = \frac{\text{maximum data value + minimum data value}}{2}
+\]</span></p>
+</div>
+<div id="measures-of-spread-or-variation" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Measures of Spread or Variation</h2>
+<p><strong>Range</strong></p>
+<p>The <strong>range</strong> of a set of data is the difference between the maximum and the minimum data values. <br/></p>
+<p><span style="color:#386cb0">
+<strong><span class="math inline">\(range = maximum - minimum\)</span></strong>
+</span></p>
+<p>The range is sensitive to outliers. A single high or low value will affect the range significantly.</p>
+</div>
+<div id="standard-deviation-of-a-sample" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Standard Deviation of a Sample</h2>
+<ul>
+<li>SD <span class="math inline">\((s)\)</span> of a set of sample values is a measure of how much, on average, the data values deviate away from the sample mean.</li>
+<li>In other word, SD describes the variability of the data set within the range of the dataset.
+<ul>
+<li>Low variability or small spread means that the values tend to be more clustered together.</li>
+<li>High variability or large spread means that the values tend to be far apart.</li>
+</ul></li>
+</ul>
+<p><strong>Calculating the Standard Deviation</strong></p>
+<p>The standard deviation is the square root of the variance. It is roughly the average distance of the observations from the mean.</p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}{s= \sqrt{\frac{1}{n-1}\sum(x_i-\bar x)^2}}
+}
+\]</span></p>
+<p>Exercise:</p>
+<p><span class="math inline">\(1. Calculate \space SD \space of \space [0,1]\)</span></p>
+<p><span class="math inline">\(2. Calculate \space SD \space of \space [30,20, 41, 21]\)</span></p>
+<p><strong>Which histogram has the largest SD?</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>Notice the range of the distributions.</p>
+<p><strong>Standard Deviation of a Population</strong></p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}{\sigma= \sqrt{\frac{1}{N}\sum(x_i-\mu)^2}}
+}
+\]</span></p>
+<p><strong>Variance of a Sample and Population</strong></p>
+<p>The <strong>variance</strong> of a set of values is a measure of variation equal to the square of the standard variation.</p>
+<ul>
+<li>Sample variance: <span class="math inline">\(s^2 =\)</span> square of the sample standard deviation <span class="math inline">\(s\)</span>.</li>
+<li>Population variance: <span class="math inline">\(\sigma^2 =\)</span> square of the population standard deviation <span class="math inline">\(\sigma\)</span>.</li>
+</ul>
+<p><strong>Coefficient of Variation</strong></p>
+<p>The <strong>coefficient of variation (CV)</strong> for a set of nonnegative sample or population data, expressed as a percent, describes the standard deviation relative to the mean, and is given by the following:</p>
+<p><span class="math display">\[
+Sample: CV = \frac{s}{x}.100 \\
+Population: CV = \frac{\sigma}{x}.100
+\]</span></p>
+</div>
+<div id="normal-distribution-68-95-99.7-rule" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Normal Distribution | 68-95-99.7 Rule</h2>
+<p>Probabilities for falling 1, 2, and 3 standard deviations of the mean in a normal distribution.</p>
+<pre><code>png 
+  2 </code></pre>
+<p><img src="6895997.png" width="800px" /></p>
+</div>
+<div id="percentiles-and-quartiles" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Percentiles and Quartiles</h2>
+<ul>
+<li>Percentiles divide the data in one hundred groups.</li>
+<li>The <strong><span class="math inline">\(n^{th}\)</span> percentile</strong> is the data value such that <span class="math inline">\(n^{th}\)</span> percent of the data lies below that value.</li>
+</ul>
+<p><span class="math display">\[
+\text{Percentile of value x} = \frac{\text{number of values less than x}}{\text{total number of values}} \times 100
+\]</span></p>
+<p><strong>Three Quartiles <span class="math inline">\((Q_1, Q_2, Q_3)\)</span></strong></p>
+<ul>
+<li><span class="math inline">\(Q_1\)</span> represents the <strong>first quartile</strong>, which is the 25th percentile, and is the median of the smaller half of the data set.</li>
+<li><span class="math inline">\(Q_2\)</span> represents the <strong>second quartile</strong>, which is equivalent to the 50th percentile (i.e. the median).</li>
+<li><span class="math inline">\(Q_3\)</span> represents the <strong>third quartile</strong>, or 75th percentile, and is the median of the larger half of the data set<br />
+</li>
+<li>Interquartile Range <span class="math inline">\((IQR) = Q_3 - Q_1\)</span></li>
+</ul>
+</div>
+<div id="outlier-and-fences" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> Outlier and Fences</h2>
+<p>When in the context of a box plot, define an outlier as an observation that</p>
+<ul>
+<li><p>right fence: <span class="math display">\[ &gt; Q_3 + 1.5 \times IQR \]</span></p></li>
+<li><p>left fence: <span class="math display">\[ &lt; Q_1 - 1.5 \times IQR \]</span></p></li>
+</ul>
+<p>Such points are marked using a dot or asterisk in a box plot.</p>
+</div>
+<div id="box-plot" class="section level2" number="4.8">
+<h2><span class="header-section-number">4.8</span> Box Plot</h2>
+<p>Data: <span class="math inline">\([5, 5, 9, 10, 15, 16, 20, 30, 40]\)</span></p>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   5.00    9.00   15.00   16.67   20.00   40.00 </code></pre>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p><strong>Example: Drawing a Boxplot with an Outlier</strong></p>
+<p>Students in one of the author’s statistics classes were surveyed about the number of novels they read in the past year. Here are the anonymous responses (in numbers of novels) of 11 of the students:</p>
+<p><span class="math inline">\([2, 5, 2, 0, 2, 3, 0, 5, 6, 4, 12]\)</span></p>
+<ol style="list-style-type: decimal">
+<li>Construct a boxplot.</li>
+<li>Check if there is any outlier.</li>
+</ol>
+</div>
+<div id="optional-materials" class="section level2" number="4.9">
+<h2><span class="header-section-number">4.9</span> Optional Materials</h2>
+<p><strong>Altering SD</strong></p>
+<div class="centered">
+<p><img src="Ch_34_Univariate_dist_varied_SD.png" width="700px" /></p>
+</div>
+<p><strong>Group Comparison</strong></p>
+<p>Comparing distributions of median household income for counties by population gain status</p>
+<p><img src="countyIncomeSplitByPopGain.png" /></p>
+<p><sup><em>Source: OpenIntroOrg</em></sup></p>
+<p><strong>Smoothing Plot: Moving Average</strong></p>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+<p><strong>Transformation of the Data</strong></p>
+<ul>
+<li>Data with outliers (i.e. skewed distribution) are hard to interpret</li>
+<li>Such data are often transformed into their logarithmic form to give the skewed distribution a normal (i.e. roughly unimodal and symmetric) shape for better interpretation</li>
+</ul>
+<p><img src="pathway_to_statistics_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
 
 </div>
 </div>
@@ -224,8 +411,8 @@
           </div>
         </div>
       </div>
-
-<a href="design-observational-studies-and-experiments.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="graphical-and-tabular-displays-of-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="random-process-and-probabillity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -257,7 +444,7 @@ gitbook.start({
 "size": 3
 },
 "edit": {
-"link": "https://github.com/amlanbanerjee/pathway_to_statistics/edit/master/index.Rmd",
+"link": "https://github.com/amlanbanerjee/pathway_to_statistics/edit/master/04-summarizing_data.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -265,7 +452,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/amlanbanerjee/pathway_to_statistics/blob/master/index.Rmd",
+"link": "https://github.com/amlanbanerjee/pathway_to_statistics/blob/master/04-summarizing_data.Rmd",
 "text": null
 },
 "download": "book.pdf",
