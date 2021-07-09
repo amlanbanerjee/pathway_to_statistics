@@ -19,7 +19,7 @@ The **mode** of some data is an observation with the greatest frequency. There c
 **Mode is represented by a prominent peak in the distribution.**
 
 
-**1. Unimodel Distribution**
+**Unimodel Distribution**
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
@@ -148,11 +148,17 @@ hist(round(email50$num_char), xlab = "Number of Characters", main = "", col = 'o
 ## Measures of Center
 
 
-**Mean**
+**MEAN**
 
-The sample mean of a numerical variable is computed as the sum of all of the observations divided by the number of observations:
+The sample mean of a numerical variable is computed as the sum of all of the observations $\{x_1, x_2, \cdots, x_n\}$ divided by the number of observations $(n)$.
 
-$\displaystyle \bar x = \sum_{i=1}^n x_i = \frac{(x_1+x_2+...+x_n)}{n}$
+If $\bar x$ is the mean, then
+
+
+$$
+\displaystyle (\bar x - x_1) + (\bar x - x_2) + \cdots + (\bar x - x_n) = 0 \\
+\displaystyle \text{Therefore}, \ \bar x = \frac{(x_1+x_2+...+x_n)}{n} = \dfrac{1}{n}\sum_{i=1}^n x_i
+$$
 
 
 The mean follows the tail
@@ -162,7 +168,7 @@ The mean follows the tail
 - In a ***symmetric*** distribution, the mean and median are approximately equal.
 
 
-**Median**
+**MEDIAN**
 
 The median splits an ordered data set in half. If there are an even number of observations, the median is the average of the two middle
 values. If there are an odd number of observations, the median is the middle value.
@@ -228,9 +234,6 @@ Find the median minimum wages of the Pacific and Mountain states.
 * If a distribution is **skewed right**, the mean is usually greater than the median and the median is usually a better measure of the center.
 
 
-
-<div class="columns-2">
-
 List: ${2,3,3,4}$   
 ```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
 list <- c(2,3,3,4) 
@@ -266,6 +269,7 @@ The simple mean is a weighted mean where all the weights are 1.
 
 $\displaystyle \bar x =\frac{1\times x_1+1\times x_2+...+1\times x_n}{1+1+...+1} = \frac{x_1+x_2+...+x_n}{n}$ 
 
+
 **Midrange**
 
 The **midrange** of a data set is the measure of center that is the value midway between the maximum and minimum values in the original data set. It is found by adding the maximum data value to the minimum data value and then dividing the sum by $2$, as the following formula:
@@ -277,7 +281,7 @@ $$
 
 ## Measures of Spread or Variation
 
-**Range**
+**RANGE**
 
 The **range** of a set of data is the difference between the maximum and the minimum data values. <br/>  
 
@@ -288,7 +292,7 @@ The **range** of a set of data is the difference between the maximum and the min
 The range is sensitive to outliers. A single high or low value will affect the range significantly.
 
 
-## Standard Deviation of a Sample
+**STANDARD DEVIATION OF A SAMPLE**
 
 * SD $(s)$ of a set of sample values is a measure of how much, on average, the data values deviate away from the sample mean.
 * In other word, SD describes the variability of the data set within the range of the dataset.
@@ -335,7 +339,7 @@ n = 500000
 
 Notice the range of the distributions.
 
-**Standard Deviation of a Population**
+**STANDARD DEVIATION OF A POPULATION**
 
 $$ \bbox[yellow,5px]
 {
@@ -354,7 +358,7 @@ The **variance** of a set of values is a measure of variation equal to the squar
 
 
 
-**Coefficient of Variation**
+**COEFFICIENT OF VARIATION**
 
 
 The **coefficient of variation (CV)** for a set of nonnegative sample or population data, expressed as a percent, describes the standard deviation relative to the mean, and is given by the following:
@@ -369,7 +373,7 @@ $$
 
 Probabilities for falling 1, 2, and 3 standard deviations of the mean in a normal distribution.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
+```{r message=FALSE, warning=FALSE, comment=NA, include=FALSE}
 library(openintro)
 data(COL)
 
@@ -434,16 +438,33 @@ abline(h = 0, col = '#AAAAAA')
 dev.off()
 ```
 
-```{r, out.width = "800px"}
+```{r, message=FALSE, warning=FALSE, comment=NA, out.width = "800px"}
 knitr::include_graphics("6895997.png")
 ```
 
+
+**Empirical Rule of Normal Distribution**
+
+$$
+\begin{array}{lc}
+\text{Interval} & \text{Percent} \\
+\hline
+\mu \pm \sigma & 68 \% \\
+\mu \pm 2\sigma & 95 \% \\
+\mu \pm 3\sigma & 99.7 \% \\
+\hline
+\end{array}
+$$
+
+
+
 ## Percentiles and Quartiles
+
 - Percentiles divide the data in one hundred groups. 
 - The **$n^{th}$ percentile** is the data value such that $n^{th}$ percent of the data lies below that value.  
 
 $$
-\text{Percentile of value x} = \frac{\text{number of values less than x}}{\text{total number of values}} \times 100
+\text{Percentile of value } x = \frac{\text{number of values less than } x}{\text{total number of values}} \times 100
 $$
 
 
@@ -472,6 +493,7 @@ Such points are marked using a dot or asterisk in a box plot.
 
 Data: $[5, 5, 9, 10, 15, 16, 20, 30, 40]$
 
+**Five Number Summary:**
 ```{r echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
 x <- c(5, 5, 9, 10, 15, 16, 20, 30, 40)
 # cat(x)
@@ -512,7 +534,6 @@ $[2, 5, 2, 0, 2, 3, 0, 5, 6, 4, 12]$
 ```{r, out.width = "700px"}
 knitr::include_graphics("Ch_34_Univariate_dist_varied_SD.png")
 ```
-</div>
 
 
 **Group Comparison**

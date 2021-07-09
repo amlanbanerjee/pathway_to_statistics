@@ -24,11 +24,13 @@ The probability is defined as a proportion, and it always takes values between $
 
 
 The **sample space** of a random experiment is the group of all possible outcomes.
+For example, in the roll of a dice, if we are interested in finding the probability of observing $1$ from the set of all of possible odd numbers, then the sample space consists of the set $\{ 1, 2, 3\}.$
 
 The **event** is some of the outcomes in the sample space, all of them, or none of them.
+For example, in the roll of a dice, if we are interested in finding the probability of observing an even number, then the event is described by the set of outcomes $\{ 2, 4, 6\}$.  
 
 
-**Theoretical vs. Experimental Probability**
+**THEORETICAL VERSUS EXPERIMENTAL PROBABILITY**
 
 
 The ***Theoretical*** probability is the likelihood of occurring of an event. It is simply the ratio of the number of desired outcomes and the number of all possible outcomes. 
@@ -37,9 +39,9 @@ The ***Theoretical*** probability is the likelihood of occurring of an event. It
 The ***experimental probability*** is an estimate of the likelihood of occurring of an event based on repeated trials. 
 
 
-<span style="color:#08519c"> **Law of Large Numbers** </span> 
+<span style="color:#08519c"> **LAW OF LARGE NUMBERS** </span> 
 
-
+---
 Consider: **Rolling a 1 of a die**
 
 If the sample space of a random experiment consists of $n$ equally likely outcomes and an event $E$ consists of $m$ of those outcomes, then
@@ -101,7 +103,7 @@ knitr::include_graphics("dieProp.png")
 The figure shows the fraction of die rolls that are $1$ at each stage in a simulation.
 The relative frequency tends to get closer to the probability $1/6 \approx 0.167$ as
 the number of rolls increases.
-
+---
 
 **Example: Calculating Probabilities**
 
@@ -130,8 +132,9 @@ Let X be the outcome of rolling a six-sided die once. Find the given probability
 
 ## Finding Probabilities  
 
-<span style="color:#08519c">  **Events are disjoint**  </span>
+This section presents the addition and multiplication rules of calculating probabilities.
 
+### Disjoint or mutually exclusive outcomes
 
 Two events or outcomes are called  **disjoint or mutually exclusive** if they cannot both happen in the same trial.    
  
@@ -150,14 +153,15 @@ $$
 It is no surprise that the probability is $1$, since it is certain that one of the six outcomes must occur.
 
 
-**Addition Rule of Disjoint Outcomes** 
+**ADDITION RULE OF DISJOINT OUTCOMES** 
 
+---
 If $A_1,...,A_k$ represent $k$ disjoint outcomes, then the probability that one of them occurs is given by:
 $$P(A_1\text{ or }A_2 \text{ or ... or }A_k)=P(A_1)+P(A_2)+...+P(A_k)$$
+---
 
 
-
-Consider a standard deck of cards.
+Example: Consider a standard deck of cards.
 
 $$
 \text {4 suits}
@@ -181,6 +185,10 @@ P(\text{the card is an ace or a king}) &= P(\text{it's an ace})+P(\text {it's a 
 & = 2/13
 \end{align}
 $$
+
+---
+**Venn Diagram - ** a diagram style to illustrate simple set relationships in probability.   
+---
 
 **Venn Diagram | When events are disjoint**  
 
@@ -212,7 +220,7 @@ draw.pairwise.venn(area1, area2, cross.area, category = c("Ace", "King"),
 
 
 
-<span style="color:#08519c"> **Events are not disjoint**  </span>
+### Probabilities when events are NOT disjoint or mutually exclusive
 
 $$
 \begin{align}
@@ -225,9 +233,7 @@ $$
 $$
 
 
-**Venn Diagram - ** a diagram style to illustrate simple set relationships in probability.   
-
-**When events are NOT disjoint**
+**Venn Diagram | When events are not disjoint**
 
 $$
 \begin{align}
@@ -254,14 +260,15 @@ draw.pairwise.venn(area1, area2, cross.area, category = c("Ace", "King"),
 ```
 
 
-### General Addition Rule of Probability
+**GENERAL ADDITION RULE OF PROBABILITIES**
+
+---
 
 $$ \bbox[yellow,5px]
 {\color{black}{P(A \space or \space B) = P(A) + P(B) - P(A \space and \space B)}}
 $$
 where $P(A \text{ and } B)$ is the probability that both events occur.
 
-</br>
 
 **If $A$ and $B$ are mutually exclusive**, $P(A \space and \space B) = 0$ 
 
@@ -269,7 +276,9 @@ Therefore,
 
 $$ P(A \space or \space B) = P(A) + P(B)$$
 
-**Complement Rule | When an event does not occur**
+---
+
+### Complement of an event
 
 The complement of event $A$ is denoted $A^c$, and $A^c$ represents all outcomes not in $A$. $A$ and $A^c$ are mathematically related:
 
@@ -313,8 +322,7 @@ draw.pairwise.venn(area1, area2, cross.area, category = c("Email", "Text"),
 ```
 
 
-
-### Multiplication Rule | for independent processes {.build}
+### Multiplication Rule | for independent processes
 
 If $A$ and $B$ represent events from two different and independent processes, then the probability that both $A$ and $B$ occur can be calculated as the product of their seprarate probabilities:
 
@@ -357,7 +365,10 @@ $$
 $$
 
 
-### General Multiplication Rule
+
+**GENERAL MULTIPLICATION RULE**
+
+---
 
 If $A$ and $B$ represent two outcomes or events, then
 
@@ -365,16 +376,42 @@ $$ \bbox[yellow,5px]
 {\color{black}{P(A \space and \space B) = P(A|B) \times P(B)}}
 $$
 
+---
 
 
+**Example 3:**
 
-**Conditional Probability**
+During the smallpox outbreak, $96.08\%$ of Boston residents were not inoculated, and $85.88\%$ of the residents who were not inoculated ended up surviving. What is the probability that a resident was not inoculated and lived?
 
-The conditional probability of the outcome of interest $A$ given condition $B$ is computed as the following:
 
-$$P(A|B) = \frac{P(A \text{ and } B)}{P(B)}$$
+To answer the question, we want to determine  $\text {P(lived and inoculated)}$,
 
-**Exercise: Calculating Probabilities from a Contingency Table:**
+and we are given that,
+
+$$
+\begin{align}
+P(\text{lived | not inoculated}) &= 0.8588  \\
+P(\text {not inoculated}) &= 0.9608  
+\end{align}
+$$
+
+Among the $96.08\%$ of people who were not inoculated, $85.88\%$ survived:
+
+$$
+P(\text {lived and not inoculated}) = 0.8588 \times 0.9608 = 0.8251
+$$
+
+
+This is equivalent to the General Multiplication Rule.
+
+
+### Marginal and joint probabilities
+
+
+If a probability is based on a single variable, it is a <span style="color:blue"> *marginal probability.* </span> The probability of outcomes for two or more variables or processes is called a <span style="color:#de2d26"> *joint probability.* </span>
+
+
+**Exercise: Calculating Probabilities with a Contingency Table:**
 
 Table: College enrollment and parents' educational attainment
 
@@ -391,10 +428,6 @@ $$
 
 
 **a) Finding Marginal and Joint Probabilities:**
-
-If a probability is based on a single variable, it is a <span style="color:blue"> *marginal probability.* </span> The probability of outcomes for two or more variables or processes is called a <span style="color:#de2d26"> *joint probability.* </span>
-
-Example: College enrollment and parents' educational attainment    
 
 $$
 \begin{array} {l|cc|c}
@@ -418,7 +451,16 @@ $$
 
 **b) Finding Conditional Probability:**
 
-Example: College enrollment and parents' educational attainment
+
+---
+
+**Conditional Probability**
+
+The conditional probability of the outcome of interest $A$ given condition $B$ is computed as the following:
+
+$$P(A|B) = \frac{P(A \text{ and } B)}{P(B)}$$
+
+---
 
 $$
 \begin{array} {l|cc|r}
@@ -444,13 +486,19 @@ $$
 
 **c) Condition of Independence**
 
+
 Verify whether one of the following equations holds:
+
+---
 
 $$ \begin{align}
 P(A|B) &= P(A) \tag 1 \\
 P(A \space and \space B) &=P (A) \times P(B) \tag 2 
 \end{align}
 $$
+
+---
+
 
 Check if the equality holds in the following equation:
 
@@ -468,12 +516,16 @@ Because both sides are not equal, teenager college attendance and parent degree 
 
 If $A$ and $B$ are mutually exclusive events, then they cannot occur at the same time. If asked to determine if events $A$ and $B$ are mutually exclusive, verify one of the following equations holds:
 
+---
+
 $$
 \begin{align}
 P(\text{A and B})&= 0 \tag 1 \\
 P(\text{A or B}) &= P(A)+P(B) \tag 2
 \end{align}
 $$
+
+---
 
 If the equation that is checked holds true, $A$ and $B$ are mutually exclusive. If the equation does not hold, then $A$ and $B$ are not mutually exclusive. 
 
@@ -491,6 +543,8 @@ $$
 &=34.11\%
 \end{align}
 $$
+
+
 
 ## Finding Probabilities from a Normal Distribution
 
@@ -655,6 +709,7 @@ $99.7\%$ of its z-scores lie between –3 and 3
 Cumulative SAT scores are approximated by a normal model with $\mu = 1500 \text { and } \sigma = 300$.   
 </div>
 
+
 **What is the probability that a randomly selected SAT taker scores at least 1630 on the SAT?**
 
 
@@ -676,7 +731,7 @@ dev.off()
 ```{r, out.width = "400px"}
 knitr::include_graphics("satAbove1630.png")
 ```
-<br/>
+
 
 $z = \frac{x-\mu}{\sigma}=\frac{1630-1500}{300}=\frac{130}{300}=0.43$   
 
@@ -717,15 +772,15 @@ $z = \frac{x-\mu}{\sigma}=\frac{1400-1500}{300}=\frac{100}{300}=-0.33$
 
 $P(z\le-0.33)=0.3707$    
 
-Edward is at the 37th percentile.
-</div>
+Edward is at the $37$th percentile.
+
 
 
 **Normal Probability Examples | percentile to z-score**
 
 Carlos believes he can get into his preferred college if he scores at least in the 80th percentile on the SAT. What score should he aim for?
 
-<div class="columns-2">
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 #===> plot <===#
 myPNG("satBelow1800.png", 450, 250,
@@ -740,7 +795,7 @@ dev.off()
 ```{r, out.width = "400px"}
 knitr::include_graphics("satBelow1800.png")
 ```
-<br/>
+
 
 At $80th$ percentile, $z = 0.84$   
 
@@ -752,25 +807,25 @@ z & = \frac{x-\mu}{\sigma} \\
 x & = 1752
 \end{align}
 $$    
-</div>
 
-<br>
-The 80th percentile on the SAT corresponds to a score of 1752.
+
+
+The $80$th percentile on the SAT corresponds to a score of $1752$.
 
 **Practice Problems**
 
-1. The scores on the Wechsler IQ test are normally distributed with mean **100** points and standard deviation **15** points. Film director Quentin Tarantino is reported to have a z-score of **z = 4** (Source: Chicago Tribune). What is his IQ score?
+1. The scores on the Wechsler IQ test are normally distributed with mean $100$ points and standard deviation $15$ points. Film director Quentin Tarantino is reported to have a z-score of $z = 4$ (Source: Chicago Tribune). What is his IQ score?
 
-2. A professor gives a test to her calculus students. The scores are approximately normally distributed with mean **75** points and standard deviation **9** points. The professor decides to give As to approximately **10%** of the students but not less than 10%. Find the cutoff score for an A.
+2. A professor gives a test to her calculus students. The scores are approximately normally distributed with mean $75$ points and standard deviation $9$ points. The professor decides to give As to approximately $10\%$ of the students but not less than 10%. Find the cutoff score for an A.
 
-3. Maria and Roberto took tests on probability in two different sections of prestatistics. Maria scored **91** points on a test with mean **77** points and standard deviation 6 points. Roberto scored **80** points on a test with mean **68** points and standard deviation **4** points. The test scores on each test are approximately normally distributed.
+3. Maria and Roberto took tests on probability in two different sections of prestatistics. Maria scored $91$ points on a test with mean $77$ points and standard deviation 6 points. Roberto scored $80$ points on a test with mean $68$ points and standard deviation $4$ points. The test scores on each test are approximately normally distributed.
 
-  - Find the z-score for Maria’s test score. What does it mean in this situation?
-  - Find the z-score for Roberto’s test score. What does it mean in this situation?
+  - Find the $z$-score for Maria's test score. What does it mean in this situation?
+  - Find the $z$-score for Roberto's test score. What does it mean in this situation?
   - Assuming a typical student in one class knows the material as well as a typical student in the other class, determine whether Maria did relatively better than Roberto.
 
 
-4. Assuming the sodium levels per serving of the low-salt chips are approximately normally distributed with mean **85** mg and standard deviation **5** mg, find the probability that a randomly selected bag would have at least **104** mg of sodium per serving.
+4. Assuming the sodium levels per serving of the low-salt chips are approximately normally distributed with mean $85$ mg and standard deviation $5$ mg, find the probability that a randomly selected bag would have at least $104$ mg of sodium per serving.
 
 
 5. What is the probability that a randomly selected data point from a normal distribution can be classified as an outlier?
